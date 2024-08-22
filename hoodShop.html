@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>Urban Munch</title>
+    <style>
+      body{
+        font-family: Arial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+      }
+      .header-wrapper{
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 6px;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        justify-content: center;
+        z-index: 1;
+      }
+      .header-text{
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+      }
+
+      @keyframes left{
+        to{
+          transform: rotateZ(90deg);
+        }
+      }
+
+      .dot-pic{
+        align-items: center;
+        width: 30%;
+        background-color: white;
+        padding: 6px;
+        border-radius: 160%;
+        cursor: pointer;
+        transition: all ease 0.3s;
+        
+      }
+
+      .dot-pic-left{
+        transform: rotateZ(90deg);
+      }
+
+      @keyframes hover{
+        from{
+          transform: translateY(10%);
+        }
+      }
+      .window-wrapper{
+        margin: 80px 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px;
+        transition: all ease 0.3s;
+      }
+      .bunny-chow{
+        width: 60%;
+        border-radius: 6px;
+      }
+      .bunny-chow-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 6px;
+        width: 90%;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+        margin: 6px 0;
+        transition: all ease 0.3s;
+      }
+
+      .liked-bunny-chow-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 8px;
+        width: 80%;
+        box-shadow: 0.5px 0.5px 6px rgba(255, 255, 255, 0.712);
+        margin: 6px 0;
+        border-radius: 6px;
+        transition: all ease 0.3s;
+      }
+      .bunny-name{
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .bunny-price{
+        font-size: 12px;
+        font-weight: 500;
+        color: lime;
+      }
+      .bunny-ingredient{
+        font-size: 10px;
+        font-weight: 500;
+        color: black;
+      }
+
+      .liked-bunny-ingredient{
+        font-size: 10px;
+        font-weight: 500;
+        color: white;
+      }
+      .order-btn{
+        background-color: black;
+        color: white;
+        padding: 6px;
+        width: 80%;
+        border-radius: 6px;
+        cursor: pointer;
+        border: none;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+        transition: all ease 0.3s;
+      }
+      .order-btn:active{
+        transform: scale(0.9);
+      }
+
+      .white-order-btn{
+        background-color: white;
+        color: black;
+        padding: 6px;
+        font-size: 12px;
+        font-weight: bold;
+        width: 80%;
+        border-radius: 6px;
+        cursor: pointer;
+        border: 1px solid white;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+        transition: all ease 0.3s;
+      }
+      .white-order-btn:active{
+        transform: scale(0.9);
+      }
+      .input-text{
+        border: none;
+        width: 90%;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        color: gray;
+        padding: 6px;
+      }
+      .find-btn{
+        background-color: white;
+        color: black;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 6px;
+        width: 90%;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: all ease 0.3s;
+      }
+      .find-btn:active{
+        transform: scale(0.9);
+      }
+
+      .hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .welcome-wrapper{
+        width: 100%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        position: absolute;
+        top: 20%;
+        padding: 6px;
+        box-sizing: border-box;
+        transition: all ease 0.3s;
+      }
+      .welcome-text{
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .liked-bunny{
+        margin: 80px 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px;
+        transition: all ease 0.3s;
+      }
+
+      .order-wrapper{
+        width: 100%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        position: fixed;
+        top: 20%;
+        padding: 6px;
+        height: 300px;
+        box-sizing: border-box;
+        transition: all ease 0.3s;
+        overflow-y: scroll;
+      }
+
+      .food-wrapper{
+        margin: 80px 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px;
+        transition: all ease 0.3s;
+      }
+
+      .details-wrapper{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+        align-items: left;
+        justify-content: space-around;
+        text-align: left;
+        transition: all ease 0.3s;
+      }
+
+      .food-pic{
+        width: 60%;
+        border-radius: 6px;
+        margin-left: 10px;
+      }
+      .order-bunny-name{
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        text-align: left;
+      }
+
+      .order-bunny-price{
+        font-size: 12px;
+        font-weight: 500;
+        text-align: left;
+        color: lime;
+      }
+
+      .order-bunny-ingredient{
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+        text-align: left;
+      }
+
+      .remove-btn{
+        background-color: tomato;
+        border: none;
+        padding: 6px;
+        width: 80%;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all ease 0.3s;
+        color: white;
+      }
+      .remove-btn:active{
+        transform: scale(0.9);
+      }
+
+      .clear-btn{
+        background-color: tomato;
+        border: none;
+        padding: 6px;
+        width: 80%;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all ease 0.3s;
+        color: white;
+      }
+      .clear-btn:active{
+        transform: scale(0.9);
+      }
+
+      .register-btn{
+        background-color: white;
+        border: none;
+        padding: 6px;
+        width: 80%;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all ease 0.3s;
+        color: black;
+      }
+      .register-btn:active{
+        transform: scale(0.9);
+      }
+      input{
+        width: 80%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        font-size: 12px;
+      }
+
+      .ingredient-input{
+        margin: 4px 0;
+        width: 70%;
+      }
+
+      .cart-list{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px;
+      }
+
+      .cart-btn{
+        width: 80%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        vertical-align: middle;
+      }
+
+      .cart-white{
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <input type="text" placeholder="ingredients" class="input-text">
+      <button class="find-btn">find</button>
+    </div>
+    <div class="window-wrapper">
+
+    </div>
+    <div class="welcome-wrapper">
+      <p class="welcome-text">Recommended</p>
+      <div class="liked-bunny">
+          <div class="liked-bunny-chow-wrapper">
+            <img src="FB_IMG_17063568981569921.jpg" class="bunny-chow" name="orderPic">
+            <p class="bunny-name" name="orderName">Third Bunny Chow</p>
+            <p class="bunny-price" name="orderPrice">R18</p>
+            <p class="liked-bunny-ingredient" name="orderIngredient">Bread, Eggs, Tomatoes, Sausages and Cheese.</p>
+            <input type="text" class="order-input" name="order">
+            <button class="white-order-btn">
+              Order
+            </button>
+          </div>
+
+          <div class="liked-bunny-chow-wrapper">
+            <img src="FB_IMG_17063568981569921.jpg" class="bunny-chow" name="orderPic">
+            <p class="bunny-name" name="orderName">Forth Bunny Chow</p>
+            <p class="bunny-price" name="orderPrice">R19</p>
+            <p class="liked-bunny-ingredient" name="orderIngredient">Bread, Eggs, Sausages, Tomatoes, Lettuce and Cheese.</p>
+            <input type="text" class="order-input1" name="order">
+            <button class="white-order-btn" >
+              Order
+            </button>
+          </div>
+
+        
+          <div class="liked-bunny-chow-wrapper">
+            <img src="FB_IMG_17063568981569921.jpg" class="bunny-chow">
+            <p class="bunny-name">Fifth Bunny Chow</p>
+            <p class="bunny-price">R20</p>
+            <p class="liked-bunny-ingredient">Bread, Eggs, Sausages, Tomatoes, Lettuce, Bacon and Cheese.</p>
+            <input type="text" class="order-input2" name="order">
+            <button class="white-order-btn" >
+              Order
+            </button>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="order-wrapper">
+      
+    </div>
+    <div class="cart-list">
+      <button class="cart-btn">cart</button>
+    </div>
+    <script>
+      const windowWrapper = document.querySelector('.window-wrapper');
+      const inputText = document.querySelector('.input-text');
+      const findBtn = document.querySelector('.find-btn');
+      const headerWrapper = document.querySelector('.header-wrapper');
+      const welcomeWrapper = document.querySelector('.welcome-wrapper');
+      const orderWrapper = document.querySelector('.order-wrapper');
+      const whiteOrderBtn = document.querySelector('.white-order-btn');
+      const orderInput = document.querySelector('.order-input');
+      const orderInput1 = document.querySelector('.order-input1'),
+            orderInput2 = document.querySelector('.order-input2');
+      const cancelInput = document.querySelector('.cancel-input'),
+            cartBtn = document.querySelector('.cart-btn');
+
+      const bunnyChow = [
+        {
+          bunnyPic: `FB_IMG_17063568981569921.jpg`,
+          bunnyName: "First Bunny Chow",
+          bunnyPrice: "R16",
+          bunnyIngredients: "Bread, Tomatoes and Cheese",
+          extraIngredient: "Cheese"
+        },
+        {
+          bunnyPic: `FB_IMG_17063568981569921.jpg`,
+          bunnyName: "Second Bunny Chow",
+          bunnyPrice: "R17",
+          bunnyIngredients: "Bread, Tomatoes, Eggs and Cheese.",
+          extraIngredient: "Eggs"
+        },
+        {
+          bunnyPic: `FB_IMG_17063568981569921.jpg`,
+          bunnyName: "Third Bunny Chow",
+          bunnyPrice: "R18",
+          bunnyIngredients: "Bread, Eggs, Tomatoes, Sausages and Cheese.",
+          extraIngredient: "Sausages"
+        },
+        {
+          bunnyPic: `FB_IMG_17063568981569921.jpg`,
+          bunnyName: "Forth Bunny Chow",
+          bunnyPrice: "R19",
+          bunnyIngredients: "Bread, Eggs, Sausages, Tomatoes, Lettuce and Cheese.",
+          extraIngredient: "Lettuce"
+        },
+        {
+          bunnyPic: `FB_IMG_17063568981569921.jpg`,
+          bunnyName: "Fifth Bunny Chow",
+          bunnyPrice: "R20",
+          bunnyIngredients: "Bread, Eggs, Sausages, Tomatoes, Lettuce, Bacon and Cheese.",
+          extraIngredient: "Bacon"
+        }
+      ];
+
+      let order = JSON.parse(localStorage.getItem('order')) || [];
+
+      function ordering(food) {
+        const smallLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p"],
+
+         bigLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"],
+
+         randomNumber = Math.floor(Math.random() * 10000);
+
+        let randomSmallLetter = smallLetters[Math.floor(Math.random() * smallLetters.length)];
+        let randomBigLetter = bigLetters[Math.floor(Math.random() * bigLetters.length)];
+        if(food === "order1"){
+          
+            order.push({
+            orderNumber: `${randomBigLetter}${randomSmallLetter}${randomNumber}`,
+            orderPic: `${bunnyChow[0].bunnyPic}`,
+            orderName: `${bunnyChow[0].bunnyName}`,
+            orderPrice: `${bunnyChow[0].bunnyPrice}`,
+            orderIngredients: `${bunnyChow[0].bunnyIngredients}`
+          });
+          orderInput.value = `orderNumber: ${randomBigLetter}${randomSmallLetter}${randomNumber}, orderPic: ${bunnyChow[0].bunnyPic}, orderName: ${bunnyChow[0].bunnyName}, orderPrice: ${bunnyChow[0].bunnyPrice}, orderIngredients: ${bunnyChow[0].bunnyIngredients}`;
+          
+        } else if(food === "order2"){
+         
+            order.push({
+              orderNumber: `${randomBigLetter}${randomSmallLetter}${randomNumber}`,
+              orderPic: `${bunnyChow[1].bunnyPic}`,
+              orderName: `${bunnyChow[1].bunnyName}`,
+              orderPrice: `${bunnyChow[1].bunnyPrice}`,
+              orderIngredients: `${bunnyChow[1].bunnyIngredients}`
+          });
+          orderInput.value = `orderNumber: ${randomBigLetter}${randomSmallLetter}${randomNumber}, orderPic: ${bunnyChow[1].bunnyPic}, orderName: ${bunnyChow[1].bunnyName}, orderPrice: ${bunnyChow[1].bunnyPrice}, orderIngredients: ${bunnyChow[1].bunnyIngredients}`;
+          
+        } else if(food === "order3"){
+          
+            order.push({
+              orderNumber: `${randomBigLetter}${randomSmallLetter}${randomNumber}`,
+              orderPic: `${bunnyChow[2].bunnyPic}`,
+              orderName: `${bunnyChow[2].bunnyName}`,
+              orderPrice: `${bunnyChow[2].bunnyPrice}`,
+              orderIngredients: `${bunnyChow[2].bunnyIngredients}`
+          });
+          orderInput.value = `orderNumber: ${randomBigLetter}${randomSmallLetter}${randomNumber}, orderPic: ${bunnyChow[2].bunnyPic}, orderName: ${bunnyChow[2].bunnyName}, orderPrice: ${bunnyChow[2].bunnyPrice}, orderIngredients: ${bunnyChow[2].bunnyIngredients}`;
+          
+        } else if(food === "order4"){
+          
+          
+            order.push({
+              orderNumber: `${randomBigLetter}${randomSmallLetter}${randomNumber}`,
+              orderPic: `${bunnyChow[3].bunnyPic}`,
+              orderName: `${bunnyChow[3].bunnyName}`,
+              orderPrice: `${bunnyChow[3].bunnyPrice}`,
+              orderIngredients: `${bunnyChow[3].bunnyIngredients}`
+          });
+          orderInput1.value = `orderNumber: ${randomBigLetter}${randomSmallLetter}${randomNumber}, orderPic: ${bunnyChow[3].bunnyPic}, orderName: ${bunnyChow[3].bunnyName}, orderPrice: ${bunnyChow[3].bunnyPrice}, orderIngredients: ${bunnyChow[3].bunnyIngredients}`;
+
+        } else if(food === "order5"){
+          
+            order.push({
+              orderNumber: `${randomBigLetter}${randomSmallLetter}${randomNumber}`,
+              orderPic: `${bunnyChow[4].bunnyPic}`,
+              orderName: `${bunnyChow[4].bunnyName}`,
+              orderPrice: `${bunnyChow[4].bunnyPrice}`,
+              orderIngredients: `${bunnyChow[4].bunnyIngredients}`
+          });
+          orderInput.value = `orderNumber: ${randomBigLetter}${randomSmallLetter}${randomNumber}, orderPic: ${bunnyChow[4].bunnyPic}, orderName: ${bunnyChow[4].bunnyName}, orderPrice: ${bunnyChow[4].bunnyPrice}, orderIngredients: ${bunnyChow[4].bunnyIngredients}`;
+          
+        };
+        localStorage.setItem("order", JSON.stringify(order));
+      };
+
+      function removeOrder() {
+        localStorage.clear();
+      }
+
+      findBtn.addEventListener('click', () => {
+        welcomeWrapper.classList.add('hide');
+        headerWrapper.innerHTML = `<p class="header-text">Urban Munch</p>`;
+        orderWrapper.classList.add('hide');
+
+        let sortedBunny = [...bunnyChow];
+
+        const search = inputText.value;
+
+        let ingredientVar = ["Bread", "Eggs", "Sausages", "Tomatoes", "Lettuce", "Bacon", "Cheese"];
+
+        if(search === ingredientVar[0]) {
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                        <img src="${bunnyChow[0].bunnyPic}" class="bunny-chow">
+                                        <p class="bunny-name">${bunnyChow[0].bunnyName}</p>
+                                        <p class="bunny-price">${bunnyChow[0].bunnyPrice}</p>
+                                        <p class="bunny-ingredient">${bunnyChow[0].bunnyIngredients}</p>
+                                        <button class="white-order-btn" >
+                                          Order
+                                        </button>
+                                        </div>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                        <img src="${bunnyChow[1].bunnyPic}" class="bunny-chow">
+                                        <p class="bunny-name">${bunnyChow[1].bunnyName}</p>
+                                        <p class="bunny-price">${bunnyChow[1].bunnyPrice}</p>
+                                        <p class="bunny-ingredient">${bunnyChow[1].bunnyIngredients}</p>
+                                        <button class="white-order-btn" >
+                                          Order
+                                        </button>
+                                        </div>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                        <img src="${bunnyChow[2].bunnyPic}" class="bunny-chow">
+                                        <p class="bunny-name">${bunnyChow[2].bunnyName}</p>
+                                        <p class="bunny-price">${bunnyChow[2].bunnyPrice}</p>
+                                        <p class="bunny-ingredient">${bunnyChow[2].bunnyIngredients}</p>
+                                        <button class="white-order-btn" >
+                                          Order
+                                        </button>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[3].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[3].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[3].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[3].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                        </div>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[4].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[4].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[4].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[4].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                        </div>
+                                      `;
+
+        } else if(search === ingredientVar[1]){
+            
+              windowWrapper.innerHTML += `
+                                            <div class="bunny-chow-wrapper">
+                                              <img src="${bunnyChow[1].bunnyPic}" class="bunny-chow">
+                                              <p class="bunny-name">${bunnyChow[1].bunnyName}</p>
+                                              <p class="bunny-price">${bunnyChow[1].bunnyPrice}</p>
+                                              <p class="bunny-ingredient">${bunnyChow[1].bunnyIngredients}</p>
+                                              <button class="white-order-btn" >
+                                                Order
+                                              </button>
+                                            </div>
+                                          `;
+
+            windowWrapper.innerHTML += `
+                                          <div class="bunny-chow-wrapper">
+                                            <img src="${bunnyChow[2].bunnyPic}" class="bunny-chow">
+                                            <p class="bunny-name">${bunnyChow[2].bunnyName}</p>
+                                            <p class="bunny-price">${bunnyChow[2].bunnyPrice}</p>
+                                            <p class="bunny-ingredient">${bunnyChow[2].bunnyIngredients}</p>
+                                            <button class="white-order-btn" >
+                                              Order
+                                            </button>
+                                          </div>
+                                        `;
+
+            windowWrapper.innerHTML += `
+                                          <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[3].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[3].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[3].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[3].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                          </div>
+                                        `;
+
+            windowWrapper.innerHTML += `
+                                          <div class="bunny-chow-wrapper">
+                                            <img src="${bunnyChow[4].bunnyPic}" class="bunny-chow">
+                                            <p class="bunny-name">${bunnyChow[4].bunnyName}</p>
+                                            <p class="bunny-price">${bunnyChow[4].bunnyPrice}</p>
+                                            <p class="bunny-ingredient">${bunnyChow[4].bunnyIngredients}</p>
+                                            <button class="white-order-btn" >
+                                              Order
+                                            </button>
+                                            
+                                          </div>
+                                        `;
+          } else if(search === ingredientVar[2]) {
+              
+                windowWrapper.innerHTML += `
+                                              <div class="bunny-chow-wrapper">
+                                                <img src="${bunnyChow[2].bunnyPic}" class="bunny-chow">
+                                                <p class="bunny-name">${bunnyChow[2].bunnyName}</p>
+                                                <p class="bunny-price">${bunnyChow[2].bunnyPrice}</p>
+                                                <p class="bunny-ingredient">${bunnyChow[2].bunnyIngredients}</p>
+                                                <button class="white-order-btn" >
+                                                  Order
+                                                </button>
+                                              </div>
+                                            `;
+
+                windowWrapper.innerHTML += `
+                                              <div class="bunny-chow-wrapper">
+                                                <img src="${bunnyChow[3].bunnyPic}" class="bunny-chow">
+                                                <p class="bunny-name">${bunnyChow[3].bunnyName}</p>
+                                                <p class="bunny-price">${bunnyChow[3].bunnyPrice}</p>
+                                                <p class="bunny-ingredient">${bunnyChow[3].bunnyIngredients}</p>
+                                                <button class="white-order-btn" >
+                                                  Order
+                                                </button>
+                                              </div>
+                                            `;
+
+              windowWrapper.innerHTML += `
+                                            <div class="bunny-chow-wrapper">
+                                              <img src="${bunnyChow[4].bunnyPic}" class="bunny-chow">
+                                              <p class="bunny-name">${bunnyChow[4].bunnyName}</p>
+                                              <p class="bunny-price">${bunnyChow[4].bunnyPrice}</p>
+                                              <p class="bunny-ingredient">${bunnyChow[4].bunnyIngredients}</p>
+                                              <button class="white-order-btn" >
+                                                Order
+                                              </button>
+                                              
+                                            </div>
+                                          `;
+ 
+          } else if(search === ingredientVar[3]) {
+            windowWrapper.innerHTML += `
+                                          <div class="bunny-chow-wrapper">
+                                            <img src="${bunnyChow[0].bunnyPic}" class="bunny-chow">
+                                            <p class="bunny-name">${bunnyChow[0].bunnyName}</p>
+                                            <p class="bunny-price">${bunnyChow[0].bunnyPrice}</p>
+                                            <p class="bunny-ingredient">${bunnyChow[0].bunnyIngredients}</p>
+                                            <button class="white-order-btn" >
+                                              Order
+                                            </button>
+                                          </div>
+                                        `;
+
+              windowWrapper.innerHTML += `
+                                            <div class="bunny-chow-wrapper">
+                                              <img src="${bunnyChow[1].bunnyPic}" class="bunny-chow">
+                                              <p class="bunny-name">${bunnyChow[1].bunnyName}</p>
+                                              <p class="bunny-price">${bunnyChow[1].bunnyPrice}</p>
+                                              <p class="bunny-ingredient">${bunnyChow[1].bunnyIngredients}</p>
+                                              <button class="white-order-btn" >
+                                                Order
+                                              </button>
+                                            </div>
+                                          `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[2].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[2].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[2].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[2].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                        </div>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[3].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[3].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[3].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[3].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                        </div>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[4].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[4].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[4].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[4].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                          
+                                        </div>
+                                      `;
+            } else if(search === ingredientVar[4]) {
+              
+                  windowWrapper.innerHTML += `
+                                                <div class="bunny-chow-wrapper">
+                                                  <img src="${bunnyChow[3].bunnyPic}" class="bunny-chow">
+                                                  <p class="bunny-name">${bunnyChow[3].bunnyName}</p>
+                                                  <p class="bunny-price">${bunnyChow[3].bunnyPrice}</p>
+                                                  <p class="bunny-ingredient">${bunnyChow[3].bunnyIngredients}</p>
+                                                  <button class="white-order-btn" >
+                                                    Order
+                                                  </button>
+                                              `;
+                windowWrapper.innerHTML += `
+                                              <div class="bunny-chow-wrapper">
+                                                <img src="${bunnyChow[4].bunnyPic}" class="bunny-chow">
+                                                <p class="bunny-name">${bunnyChow[4].bunnyName}</p>
+                                                <p class="bunny-price">${bunnyChow[4].bunnyPrice}</p>
+                                                <p class="bunny-ingredient">${bunnyChow[4].bunnyIngredients}</p>
+                                                <button class="white-order-btn" >
+                                                  Order
+                                                </button>
+                                              </div>
+                                            `;
+            } else if(search === ingredientVar[5]) {
+              
+                windowWrapper.innerHTML += `
+                                              <div class="bunny-chow-wrapper">
+                                                <img src="${bunnyChow[4].bunnyPic}" class="bunny-chow">
+                                                <p class="bunny-name">${bunnyChow[4].bunnyName}</p>
+                                                <p class="bunny-price">${bunnyChow[4].bunnyPrice}</p>
+                                                <p class="bunny-ingredient">${bunnyChow[4].bunnyIngredients}</p>
+                                                <button class="white-order-btn" >
+                                                  Order
+                                                </button>
+                                              </div>
+                                            `;
+            } else if(search === ingredientVar[6]) {
+              
+              windowWrapper.innerHTML += `
+                                            <div class="bunny-chow-wrapper">
+                                              <img src="${bunnyChow[0].bunnyPic}" class="bunny-chow">
+                                              <p class="bunny-name">${bunnyChow[0].bunnyName}</p>
+                                              <p class="bunny-price">${bunnyChow[0].bunnyPrice}</p>
+                                              <p class="bunny-ingredient">${bunnyChow[0].bunnyIngredients}</p>
+                                              <button class="white-order-btn" >
+                                                Order
+                                              </button>
+                                            </div>
+                                          `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[1].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[1].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[1].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[1].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                        </div>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[2].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[2].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[2].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[2].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                        </div>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[3].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[3].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[3].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[3].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                        </div>
+                                      `;
+
+          windowWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${bunnyChow[4].bunnyPic}" class="bunny-chow">
+                                          <p class="bunny-name">${bunnyChow[4].bunnyName}</p>
+                                          <p class="bunny-price">${bunnyChow[4].bunnyPrice}</p>
+                                          <p class="bunny-ingredient">${bunnyChow[4].bunnyIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                          
+                                        </div>
+                                      `;
+          }
+
+      });
+
+      cartBtn.addEventListener('click', () => {
+        if(!cartBtn.classList.contains('cart-white')) {
+          cartBtn.classList.add('cart-white');
+          welcomeWrapper.classList.add('hide');
+          orderWrapper.classList.remove('hide');
+        } else if(cartBtn.classList.contains('cart-white')){
+          cartBtn.classList.remove('cart-white');
+          welcomeWrapper.classList.remove('hide');
+          orderWrapper.classList.add('hide');
+        }
+        welcomeWrapper.classList.add('hide');
+        orderWrapper.classList.remove('hide');
+        orderWrapper.innerHTML += `
+                                        <div class="bunny-chow-wrapper">
+                                          <img src="${order.orderPic}" class="bunny-chow">
+                                          <p class="bunny-name">${order.orderName}</p>
+                                          <p class="bunny-price">${order.orderPrice}</p>
+                                          <p class="bunny-ingredient">${order.orderNumber}</p>
+                                          <p class="bunny-ingredient">${order.orderIngredients}</p>
+                                          <button class="white-order-btn" >
+                                            Order
+                                          </button>
+                                          
+                                        </div>
+                                      `;
+      });
+
+      window.onload = () => {
+        orderWrapper.classList.add('hide');
+        orderInput.classList.add('hide');
+        orderInput1.classList.add('hide');
+        orderInput2.classList.add('hide');
+      }
+    </script>
+  </body>
+</html>
