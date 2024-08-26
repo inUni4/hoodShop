@@ -1,339 +1,66 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
-    <style>
-      body{
-        font-family: Arial;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .header-wrapper{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: black;
-        padding: 6px;
-        display: grid;
-        grid-template-columns: 60% 40%;
-        align-items: center;
-        justify-content: space-between;
-        transition: all ease 0.3s;
-        z-index: 3;
-      }
-      .product-input{
-        width: 80%;
-        padding: 6px;
-        border: none;
-        border-radius: 60px;
-        font-size: 12px;
-        font-weight: 500;
-        color: gray;
-        text-align: center;
-      }
-      .find-btn{
-        width: 90%;
-        padding: 6px;
-        font-size: 12px;
-        font-weight: bold;
-        border: none;
-        border-radius: 6px;
-        background-color: white;
-        color: black;
-        transition: all ease 0.3s;
-        cursor: pointer;
-      }
-      .product-wrapper{
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: 50px;
-        margin-bottom: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding: 6px;
-        background-color: black;
-        border: 1px solid white;
-        transition: all ease 0.3s;
-      }
-      .product-container{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding: 6px;
-        background-color: black;
-        border: 1px solid white;
-        border-radius: 6px;
-        transition: all ease 0.3s;
-        margin: 6px;
-      }
-      .product-container1{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding: 6px;
-        background-color: black;
-        border: 1px solid white;
-        border-radius: 6px;
-        transition: all ease 0.3s;
-        margin: 6px;
-      }
-      .product-pic{
-        width: 60%;
-        border-radius: 6px;
-      }
-      .product-name{
-        font-size: 12px;
-        font-weight: bold;
-        color: black;
-        background-color: white;
-        padding: 6px;
-      }
-      .product-price{
-        font-size: 12px;
-        font-weight: 500;
-        color: lime;
-      }
-      input{
-        width: 40%;
-        border: none;
-        border-radius: 6px;
-        padding: 6px;
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: 500;
-        color: black;
-        text-align: center;
-      }
-      .add-btn{
-        background-color: white;
-        color: black;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 6px;
-        width: 80%;
-        border-radius: 6px;
-        cursor: pointer;
-        margin: 6px;
-        transition: all ease 0.3s;
-      }
-      .add-btn:active{
-        transform: scale(0.9);
-      }
-      .order-btn{
-        background-color: rgb(2, 207, 2);
-        color: white;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 6px;
-        width: 80%;
-        border-radius: 6px;
-        cursor: pointer;
-        margin: 6px;
-        border: none;
-        transition: all ease 0.3s;
-      }
-      .order-btn:active{
-        transform: scale(0.9);
-      }
-      .remove-btn{
-        background-color: rgb(209, 1, 1);
-        color: white;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 6px;
-        width: 80%;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin: 6px;
-        transition: all ease 0.3s;
-      }
-      .remove-btn:active{
-        transform: scale(0.9);
-      }
-      .hide{
-        opacity: 0;
-        pointer-events: none;
-      }
-      .search-wrapper{
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding: 6px;
-        background-color: black;
-        border: 1px solid white;
-        position: absolute;
-        top: 20%;
-        transition: all ease 0.3s;
-      }
-      .order-wrapper{
-        width: 80%;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding: 6px;
-        background-color: black;
-        border: 1px solid white;
-        border-radius: 6px;
-        overflow-y: scroll;
-        position: absolute;
-        top: 15%;
-        transition: all ease 0.3s;
-      }
-      .cart-wrapper{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 6px;
-        box-sizing: border-box;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transition: all ease 0.3s;
-        z-index: 3;
-      }
-      .cart-btn{
-        width: 80%;
-        border: none;
-        padding: 6px;
-        border-radius: 6px;
-        font-size: 12px;
-        font-weight: bold;
-        color: black;
-        background-color: white;
-        cursor: pointer;
-        transition: all ease 0.3s;
-      }
-      .cart-btn:active{
-        transform: scale(0.9);
-      }
-      .cart-left{
-        color: white;
-        background-color: black;
-        border: 1px solid white;
-      }
-      .quantity-text{
-        color: white;
-        font-size: 12px;
-        font-weight: 500;
-      }
-      .item-text{
-        font-size: 14px;
-        font-weight: bold;
-        color: white;
-      }
-      .item-number{
-        font-size: 12px;
-        font-weight: 500;
-        color: white;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header-wrapper">
-      <input type="text" placeholder="Product" class="product-input">
-      <button class="find-btn">Find</button>
-    </div>
-
-    <div class="product-wrapper">
-      <div class="product-container">
-        <img src="albany brown bread.jpg" class="product-pic">
-        <p class="product-name">Albany Everyday Brown Bread Loaf 700g</p>
-        <p class="product-price">R17</p>
-        <input type="number" placeholder="quantity" class="quantity-input">
-        <button class="add-btn" onclick="ordering('Albany Everyday Brown Bread Loaf 700g')">Add</button>
-      </div>
-
-      <div class="product-container">
-        <img src="albany white.jpg" class="product-pic">
-        <p class="product-name">Albany Every Day Thick Sliced White Bread</p>
-        <p class="product-price">R18</p>
-        <input type="number" placeholder="quantity" class="quantity-input1">
-        <button class="add-btn" onclick="ordering('Albany Every Day Thick Sliced White Bread')">Add</button>
-      </div>
-
-      <div class="product-container">
-        <img src="baked beans.jpg" class="product-pic">
-        <p class="product-name">Ritebrand Baked Beans in Tomato Sauce Can 410g</p>
-        <p class="product-price">R12</p>
-        <input type="number" placeholder="quantity" class="quantity-input2">
-        <button class="add-btn" onclick="ordering('Ritebrand Baked Beans in Tomato Sauce Can 410g')">Add</button>
-      </div>
-
-      <div class="product-container">
-        <img src="blue ribbon white.jpg" class="product-pic">
-        <p class="product-name">Blue Ribbon Sliced White Bread 700g</p>
-        <p class="product-price">R20</p>
-        <input type="number" placeholder="quantity" class="quantity-input3">
-        <button class="add-btn" onclick="ordering('Blue Ribbon Sliced White Bread 700g')">Add</button>
-      </div>
-
-      <div class="product-container">
-        <img src="brown sugar.jpg" class="product-pic">
-        <p class="product-name">Selati Golden Brown Sugar 2kg</p>
-        <p class="product-price">R60</p>
-        <input type="number" placeholder="quantity" class="quantity-input4">
-        <button class="add-btn" onclick="ordering('Selati Golden Brown Sugar 2kg')">Add</button>
-      </div>
-
-      <div class="product-container">
-        <img src="fat spread brick.jpg" class="product-pic">
-        <p class="product-name">D'Lite 40% Fat Spread Brick 500g</p>
-        <p class="product-price">R15</p>
-        <input type="number" placeholder="quantity" class="quantity-input5">
-        <button class="add-btn" onclick="ordering(`D'Lite 40% Fat Spread Brick 500g`)">Add</button>
-      </div>
-    </div>
-
-    <div class="search-wrapper">
-      
-    </div>
-
-    <div class="cart-wrapper">
-      <button class="cart-btn">Cart</button>
-    </div>
-
-    <div class="order-wrapper">
-      <p class="item-text">Items:</p>
-      <button class="order-btn">order</button>
-    </div>
-    <script>
-      const productWrapper = document.querySelector('.product-wrapper');
-      const productContainer = document.querySelector('.product-container');
-      const addBtn = document.querySelector('.add-btn');
-      const productInput = document.querySelector('.product-input');
-      const findBtn = document.querySelector('.find-btn');
-      const searchWrapper = document.querySelector('.search-wrapper');
-      const headerWrapper = document.querySelector('.header-wrapper');
-      const cartBtn = document.querySelector('.cart-btn');
-      const quantityInput = document.querySelector('.quantity-input'),
-      quantityInput1 = document.querySelector('.quantity-input1'),
-      quantityInput2 = document.querySelector('.quantity-input2'),
-      quantityInput3 = document.querySelector('.quantity-input3'),
-      quantityInput4 = document.querySelector('.quantity-input4'),
-      quantityInput5 = document.querySelector('.quantity-input5');
-      const cartWrapper = document.querySelector('.cart-wrapper');
-      const orderWrapper = document.querySelector('.order-wrapper');
-      const orderNumer = document.querySelector('.order-number');
+"use strict"
+const productWrapper = document.querySelector('.product-wrapper'),
+productContainer = document.querySelector('.product-container'),
+addBtn = document.querySelector('.add-btn'),
+productInput = document.querySelector('.product-input'),
+findBtn = document.querySelector('.find-btn'),
+searchWrapper = document.querySelector('.search-wrapper'),
+headerWrapper = document.querySelector('.header-wrapper'),
+cartBtn = document.querySelector('.cart-btn');
+const quantityInput = document.querySelector('.quantity-input'),
+quantityInput1 = document.querySelector('.quantity-input1'),
+quantityInput2 = document.querySelector('.quantity-input2'),
+quantityInput3 = document.querySelector('.quantity-input3'),
+quantityInput4 = document.querySelector('.quantity-input4'),
+quantityInput5 = document.querySelector('.quantity-input5'),
+quantityInput6 = document.querySelector('.quantity-input6'),
+quantityInput7 = document.querySelector('.quantity-input7'),
+quantityInput8 = document.querySelector('.quantity-input8'),
+quantityInput9 = document.querySelector('.quantity-input9'),
+quantityInput10 = document.querySelector('.quantity-input10'),
+quantityInput11 = document.querySelector('.quantity-input11'),
+quantityInput12 = document.querySelector('.quantity-input12'),
+quantityInput13 = document.querySelector('.quantity-input13'),
+quantityInput14 = document.querySelector('.quantity-input14'),
+quantityInput15 = document.querySelector('.quantity-input15'),
+quantityInput16 = document.querySelector('.quantity-input16'),
+quantityInput17 = document.querySelector('.quantity-input17'),
+quantityInput18 = document.querySelector('.quantity-input18'),
+quantityInput19 = document.querySelector('.quantity-input19'),
+quantityInput20 = document.querySelector('.quantity-input20'),
+quantityInput21 = document.querySelector('.quantity-input21'),
+quantityInput22 = document.querySelector('.quantity-input22'),
+quantityInput23 = document.querySelector('.quantity-input23'),
+quantityInput24 = document.querySelector('.quantity-input24'),
+quantityInput25 = document.querySelector('.quantity-input25'),
+quantityInput26 = document.querySelector('.quantity-input26'),
+quantityInput27 = document.querySelector('.quantity-input27'),
+quantityInput28 = document.querySelector('.quantity-input28'),
+quantityInput29 = document.querySelector('.quantity-input29'),
+quantityInput30 = document.querySelector('.quantity-input30'),
+quantityInput31 = document.querySelector('.quantity-input31'),
+quantityInput32 = document.querySelector('.quantity-input32'),
+quantityInput33 = document.querySelector('.quantity-input33'),
+quantityInput34 = document.querySelector('.quantity-input34'),
+quantityInput35 = document.querySelector('.quantity-input35'),
+quantityInput36 = document.querySelector('.quantity-input36'),
+quantityInput37 = document.querySelector('.quantity-input37'),
+quantityInput38 = document.querySelector('.quantity-input38'),
+quantityInput39 = document.querySelector('.quantity-input39'),
+quantityInput40 = document.querySelector('.quantity-input40'),
+quantityInput41 = document.querySelector('.quantity-input41'),
+quantityInput42 = document.querySelector('.quantity-input42'),
+quantityInput43 = document.querySelector('.quantity-input43'),
+quantityInput44 = document.querySelector('.quantity-input44'),
+quantityInput45 = document.querySelector('.quantity-input45'),
+quantityInput46 = document.querySelector('.quantity-input46'),
+quantityInput47 = document.querySelector('.quantity-input47'),
+quantityInput48 = document.querySelector('.quantity-input48'),
+cartWrapper = document.querySelector('.cart-wrapper'),
+orderWrapper = document.querySelector('.order-wrapper'),
+orderNumber = document.querySelector('.order-number');
+const orderBtn = document.querySelector('.order-btn');
+const orderInput = document.querySelector('.order-input');
 
       const products = [
         {
@@ -522,7 +249,7 @@
           productPrice: 25
         },
         {
-          productPic: "Luck Star pilchards 400g.jpg",
+          productPic: "Lucky Star pilchards 400g.jpg",
           productName: "Lucky Star Pilchards In Tomato Sauce Tin 400g",
           productPrice: 29
         },
@@ -580,6 +307,196 @@
           productPic: "white mushrooms 250g.jpg",
           productName: "White Mushrooms Pack 250g",
           productPrice: 20
+        },
+        {
+          productPic: "all gold tomato sauce 700ml.jpg",
+          productName: "ALL GOLD Tomato Sauce Bottle 700ml",
+          productPrice: 40
+        },
+        {
+          productPic: "avocados pack 1kg.jpg",
+          productName: "Avocados Pack 1kg",
+          productPrice: 25
+        },
+        {
+          productPic: "bar one large chocolate 52g.jpg",
+          productName: "Bar-One Large Chocolate 52g",
+          productPrice: 14
+        },
+        {
+          productPic: "beetroot 1kg.jpg",
+          productName: "Beetroots Pack 1kg",
+          productPrice: 13
+        },
+        {
+          productPic: "blossom spread 25% fat spread 1kg.jpg",
+          productName: "Blossom Spread 25% Fat Spread 1kg",
+          productPrice: 50
+        },
+        {
+          productPic: "bokomo corn flakes 1kg.jpg",
+          productName: "Bokomo Original Corn Flakes 1kg",
+          productPrice: 70
+        },
+        {
+          productPic: "cadbury crunchie chocolate 40g.jpg",
+          productName: "Cadbury Crunchie Chocolate Bar 40g",
+          productPrice: 14
+        },
+        {
+          productPic: "cadbury lunch bar max 62g.jpg",
+          productName: "Cadbury Lunch Bar Max Chocolate Bar 62g",
+          productPrice: 17
+        },
+        {
+          productPic: "cadbury p.s milk chocolate 48g.jpg",
+          productName: "Cadbury P.S. Milk Chocolate Bar 48g",
+          productPrice: 14
+        },
+        {
+          productPic: "carrots pack 3kg.jpg",
+          productName: "Carrots Pack 3kg",
+          productPrice: 35
+        },
+        {
+          productPic: "cauliflower and brocolli pack.jpg",
+          productName: "Cauliflower & Brocolli Pack",
+          productPrice: 30
+        },
+        {
+          productPic: "cheas snaks cheese maize snack 135g.jpg",
+          productName: "Cheas Snaks Cheese Flavoured Maize Snack 135g",
+          productPrice: 15
+        },
+        {
+          productPic: "coney roll single.jpg",
+          productName: "Coney Roll Single",
+          productPrice: 4
+        },
+        {
+          productPic: "danone nutriday mixed flavoured dairy snack 6 x 100g.jpg",
+          productName: "Danone NutriDay Strawberry, Banana And Mixed Fruit Flavoured Low Fat Dairy Snack 6 x 100g",
+          productPrice: 23
+        },
+        {
+          productPic: "doritos sweet chilli pepper corn chips 145g.jpg",
+          productName: "Doritos Sweet Chilli Pepper Flavoured Corn Chips 145g",
+          productPrice: 23
+        },
+        {
+          productPic: "fair cape dairies chocolate dessert 125ml.jpg",
+          productName: "Fair Cape Dairies Chocolate Dessert 125ml",
+          productPrice: 10
+        },
+        {
+          productPic: "fresh large french loaf 400g.jpg",
+          productName: "Fresh Large French Loaf 400g",
+          productPrice: 17
+        },
+        {
+          productPic: "ghost pops the original maize snack 100g.jpg",
+          productName: "Ghost Pops The Original Flavoured Maize Snack 100g",
+          productPrice: 16
+        },
+        {
+          productPic: "gold star yeast 10g.jpg",
+          productName: "Gold Star Instant Yeast 10g",
+          productPrice: 7
+        },
+        {
+          productPic: "green pepper.jpg",
+          productName: "Green Peppers Bag",
+          productPrice: 30
+        },
+        {
+          productPic: "heavenly chocolate slab 80g.jpg",
+          productName: "Heavenly Hazel Heaven Chocolate Slab 80g",
+          productPrice: 20
+        },
+        {
+          productPic: "huletts white sugar 10kg.jpg",
+          productName: "Huletts White Sugar 10kg",
+          productPrice: 250
+        },
+        {
+          productPic: "imana super stock chill beef cubes 12 pack.jpg",
+          productName: "Imana Super Stock Chill Beef Flavoured Cubes 12 Pack",
+          productPrice: 16
+        },
+        {
+          productPic: "Jungle Oats 1kg.jpg",
+          productName: "Jungle Oats 1kg",
+          productPrice: 46
+        },
+        {
+          productPic: "kitkat 4 finger milk chocolate 41.5g.jpg",
+          productName: "KitKat 4 Finger Milk Chocolate Bar 41.5g",
+          productPrice: 14
+        },
+        {
+          productPic: "knorr brown onion soup 50g.jpg",
+          productName: "Knorr Brown Onion Thickening Soup 50g",
+          productPrice: 8
+        },
+        {
+          productPic: "knorrox beef flavoured stock cubes 12 x 10g.jpg",
+          productName: "Knorrox Beef Flavoured Stock Cubes 12 x 10g",
+          productPrice: 19
+        },
+        {
+          productPic: "knorrox boerewors flavoured soya mince 400g.jpg",
+          productName: "Knorrox Boerewors Flavoured Soya Mince 400g",
+          productPrice: 33
+        },
+        {
+          productPic: "knorrox chilli beef soya mince 400g.jpg",
+          productName: "Knorrox Chilli Beef Flavoured Soya Mince 400g",
+          productPrice: 33
+        },
+        {
+          productPic: "knorrox mutton flavoured soya mince 400g.jpg",
+          productName: "Knorrox Mutton Flavoured Soya Mince 400g",
+          productPrice: 33
+        },
+        {
+          productPic: "lean beef mince per kg.jpg",
+          productName: "Lean Beef Mince Per kg",
+          productPrice: 110
+        },
+        {
+          productPic: "lucky star pilchards in hot chili sauce.jpg",
+          productName: "Lucky Star Pilchards in Hot Chilli Sauce",
+          productPrice: 29
+        },
+        {
+          productPic: "mixed pepper.jpg",
+          productName: "Mixed Peppers Bag",
+          productPrice: 30
+        },
+        {
+          productPic: "mutton pack per kg.jpg",
+          productName: "Mutton Pack Per kg",
+          productPrice: 110
+        },
+        {
+          productPic: "nosh chocolate 56g.jpg",
+          productName: "Nosh Chocolate Bar 56g",
+          productPrice: 13
+        },
+        {
+          productPic: "onions bag 3kg.jpg",
+          productName: "Onions Bag 3kg",
+          productPrice: 50
+        },
+        {
+          productPic: "onions per kg.jpg",
+          productName: "Onions Per KG",
+          productPrice: 18
+        },
+        {
+          productPic: "oreo biscuits 128g.jpg",
+          productName: "OREO Original Biscuits 128g",
+          productPrice: 19
         }
       ];
 
@@ -587,7 +504,6 @@
         headerWrapper.innerHTML = `<p class="product-name">hoodShop</p>`;
         cartWrapper.classList.add('hide');
         orderWrapper.classList.add('hide');
-        let sortedProducts = [...products];
 
         for(let i = 0; i < products.length; i++) {
           productWrapper.classList.add('hide');
@@ -598,7 +514,7 @@
                                         <img src="${products[i].productPic}" class="product-pic">
                                         <p class="product-name">${products[i].productName}</p>
                                         <p class="product-price">R${products[i].productPrice}</p>
-                                        <button class="add-btn" onclick="ordering(\`${products[i].productName}\`, \`${quantityInput.value = 1}\`)">Add</button>
+                                        <button class="add-btn" onclick="ordering(\`${products[i].productName}\`, \`${quantityInput.value = 1}\`, \`${quantityInput1.value = 1}\`, \`${quantityInput2.value = 1}\`, \`${quantityInput3.value = 1}\`, \`${quantityInput4.value = 1}\`, \`${quantityInput5.value = 1}\`, \`${quantityInput6.value = 1}\`, \`${quantityInput7.value = 1}\`, \`${quantityInput8.value = 1}\`, \`${quantityInput9.value = 1}\`, \`${quantityInput10.value = 1}\`, \`${quantityInput11.value = 1}\`, \`${quantityInput12.value = 1}\`, \`${quantityInput13.value = 1}\`, \`${quantityInput14.value = 1}\`, \`${quantityInput15.value = 1}\`, \`${quantityInput16.value = 1}\`, \`${quantityInput17.value = 1}\`, \`${quantityInput18.value = 1}\`, \`${quantityInput19.value = 1}\`, \`${quantityInput20.value = 1}\`, \`${quantityInput21.value = 1}\`, \`${quantityInput22.value = 1}\`, \`${quantityInput23.value = 1}\`, \`${quantityInput24.value = 1}\`, \`${quantityInput25.value = 1}\`, \`${quantityInput26.value = 1}\`, \`${quantityInput27.value = 1}\`, \`${quantityInput28.value = 1}\`, \`${quantityInput29.value = 1}\`, \`${quantityInput30.value = 1}\`, \`${quantityInput31.value = 1}\`, \`${quantityInput32.value = 1}\`, \`${quantityInput33.value = 1}\`, \`${quantityInput34.value = 1}\`, \`${quantityInput35.value = 1}\`, \`${quantityInput36.value = 1}\`, \`${quantityInput37.value = 1}\`, \`${quantityInput38.value = 1}\`, \`${quantityInput39.value = 1}\`, \`${quantityInput40.value = 1}\`, \`${quantityInput41.value = 1}\`, \`${quantityInput42.value = 1}\`, \`${quantityInput43.value = 1}\`, \`${quantityInput44.value = 1}\`, \`${quantityInput45.value = 1}\`, \`${quantityInput46.value = 1}\`, \`${quantityInput47.value = 1}\`, \`${quantityInput48.value = 1}\`)">Add</button>
                                        </div>`;
           }
         };
@@ -654,252 +570,301 @@
                 orderPic: "large eggs.jpg",
                 orderName: "Nulaid Large Eggs 18 Pack",
                 orderPrice: 60,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput6.value
               });
             } else if(food === "Loose Bananas Per kg") {
               order.push({
                 orderPic: "loose banana.jpg",
                 orderName: "Loose Bananas Per kg",
                 orderPrice: 17,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput7.value
               });
             } else if(food === "Mr.Pasta Macaroni Pasta 500g") {
               order.push({
                 orderPic: "macaroni.jpg",
                 orderName: "Mr.Pasta Macaroni Pasta 500g",
                 orderPrice: 16,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput8.value
               });
             } else if(food === "Farmer's Choice Frozen Mixed Chicken Portions with Brine Based Mixture 5kg") {
               order.push({
                 orderPic: "mixed chicken portions.jpg",
                 orderName: "Farmer's Choice Frozen Mixed Chicken Portions with Brine Based Mixture 5kg",
                 orderPrice: 235,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput9.value
               });
             } else if(food === "Potatoes Pack 2kg") {
               order.push({
                 orderPic: "potato pack 2kg.jpg",
                 orderName: "Potatoes Pack 2kg",
                 orderPrice: 30,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput10.value
               });
             } else if(food === "Potatoes Sock 7kg") {
               order.push({
                 orderPic: "potato sock.jpg",
                 orderName: "Potatoes Sock 7kg",
                 orderPrice: 80,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput11.value
               });
             } else if(food === "SASKO Low G.I Dumpy Oats & Honey Flavoured White Bread 700g") {
               order.push({
                 orderPic: "sasko low g.i white bread.jpg",
                 orderName: "SASKO Low G.I Dumpy Oats & Honey Flavoured White Bread 700g",
                 orderPrice: 24,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput12.value
               });
             } else if(food === "Mr.Pasta Spaghetti Pasta 500g") {
               order.push({
                 orderPic: "spaghetti.jpg",
                 orderName: "Mr.Pasta Spaghetti Pasta 500g",
                 orderPrice: 16,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput13.value
               });
             } else if(food === "Spekko Long Grain Parboiled White Rice Bag 2kg") {
               order.push({
                 orderPic: "spekko parboiled white rice.jpg",
                 orderName: "Spekko Long Grain Parboiled White Rice Bag 2kg",
                 orderPrice: 50,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput14.value
               });
             } else if(food === "Standard White Bread 600g") {
               order.push({
                 orderPic: "standard white bread.jpg",
                 orderName: "Standard White Bread 600g",
                 orderPrice: 12,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput15.value
               });
             } else if(food === "Ritebrand Sunflower Seed Oil 4L") {
               order.push({
                 orderPic: "sunflower seed oil 4l.jpg",
                 orderName: "Ritebrand Sunflower Seed Oil 4L",
                 orderPrice: 130,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput16.value
               });
             } else if(food === "Sunfoil Pure Sunflower Seed Oil 750ml") {
               order.push({
                 orderPic: "sunflower seed oil 750ml.jpg",
                 orderName: "Sunfoil Pure Sunflower Seed Oil 750ml",
                 orderPrice: 37,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput17.value
               });
             } else if(food === "Weet-Bix Wholegrain Wheat Biscuits 450g") {
               order.push({
                 orderPic: "weet bix 450g.jpg",
                 orderName: "Weet-Bix Wholegrain Wheat Biscuits 450g",
                 orderPrice: 37,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput18.value
               });
             } else if(food === "White Hamburger Roll") {
               order.push({
                 orderPic: "white hamburger roll.jpg",
                 orderName: "White Hamburger Roll",
                 orderPrice: 3,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput19.value
               });
             } else if(food === "White Maize Bread 600g") {
               order.push({
                 orderPic: "white maize bread.jpg",
                 orderName: "White Maize Bread 600g",
                 orderPrice: 10,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput20.value
               });
             } else if(food === "White Star Super Maize Meal 5kg") {
               order.push({
                 orderPic: "white star super maize meal 5kg.jpg",
                 orderName: "White Star Super Maize Meal 5kg",
                 orderPrice: 60,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput21.value
               });
             } else if(food === "Darling Amasi Maas Bottle 2L") {
               order.push({
                 orderPic: "amasi 2l.jpg",
                 orderName: "Darling Amasi Maas Bottle 2L",
                 orderPrice: 37,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput22.value
               });
             } else if(food === "Baumann's Marie Bisquits 150g") {
               order.push({
-                orderPic: "baumanns marie bisquits 150g.jpg",
+                orderPic: "baumanns marie biscuits 150g.jpg",
                 orderName: "Baumann's Marie Bisquits 150g",
                 orderPrice: 15,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput23.value
               });
             } else if(food === "Beef Potjiekos Per kg") {
               order.push({
                 orderPic: "beef potjiekos.jpg",
                 orderName: "Beef Potjiekos Per kg",
                 orderPrice: 100,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput24.value
               });
             } else if(food === "Benny Chicken Flavoured Stock Powder 17g") {
               order.push({
                 orderPic: "benny chicken stock powder 17g.jpg",
                 orderName: "Benny Chicken Flavoured Stock Powder 17g",
                 orderPrice: 2,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput25.value
               });
             } else if(food === "Rebertsons Coarse Black Pepper Compound Envelope 7g") {
               order.push({
                 orderPic: "black pepper.jpg",
                 orderName: "Rebertsons Coarse Black Pepper Compound Envelope 7g",
                 orderPrice: 4,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput26.value
               });
             } else if(food === "Cerebos Iodated Sea Salt 500g") {
               order.push({
                 orderPic: "cerebos iodated sea salt 500g.jpg",
                 orderName: "Cerebos Iodated Sea Salt 500g",
                 orderPrice: 11,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput27.value
               });
             } else if(food === "Clover Classic Assorted Low Fat Flavoured Dairy Snack 6 x 100g") {
               order.push({
                 orderPic: "clover classic dairy snack 6 x 100g.jpg",
                 orderName: "Clover Classic Assorted Low Fat Flavoured Dairy Snack 6 x 100g",
                 orderPrice: 23,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput28.value
               });
             } else if(food === "Crisp Lettuce Head Pack") {
               order.push({
                 orderPic: "crisp lettuce head pack.jpg",
                 orderName: "Crisp Lettuce Head Pack",
                 orderPrice: 19,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput29.value
               });
             } else if(food === "English Cucumber Single") {
               order.push({
                 orderPic: "english cucumber single.jpg",
                 orderName: "English Cucumber Single",
                 orderPrice: 19,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput30.value
               });
             } else if(food === "Excella Rich & Creamy Mayonnaise 750g") {
               order.push({
                 orderPic: "excella mayonnaise 750g.jpg",
                 orderName: "Excella Rich & Creamy Mayonnaise 750g",
                 orderPrice: 39,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput31.value
               });
             } else if(food === "Crystal Valley Gouda Flavoured Full Cream Processed Cheese Slices 9 Pack") {
               order.push({
                 orderPic: "gouda cheese.jpg",
                 orderName: "Crystal Valley Gouda Flavoured Full Cream Processed Cheese Slices 9 Pack",
                 orderPrice: 30,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput32.value
               });
             } else if(food === "White Hotdog Roll 6 Pack") {
               order.push({
                 orderPic: "hot dog roll 6 pack.jpg",
                 orderName: "White Hotdog Roll 6 Pack",
                 orderPrice: 15,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput33.value
               });
             } else if(food === "Huletts White Sugar 2,5kg") {
               order.push({
                 orderPic: "huletts white sugar 2,5kg.jpg",
                 orderName: "Huletts White Sugar 2,5kg",
                 orderPrice: 64,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput34.value
               });
             } else if(food === "Pink Lamington Snowball") {
               order.push({
                 orderPic: "lamington snowball.jpg",
                 orderName: "Pink Lamington Snowball",
                 orderPrice: 10,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput35.value
               });
             } else if(food === "Large Unwrapped Cabbage Single") {
               order.push({
                 orderPic: "large unwrapped cabbage.jpg",
                 orderName: "Large Unwrapped Cabbage Single",
                 orderPrice: 25,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput36.value
               });
             } else if(food === "Lucky Star Pilchards In Tomato Sauce Tin 400g") {
               order.push({
                 orderPic: "Luck Star pilchards 400g.jpg",
                 orderName: "Lucky Star Pilchards In Tomato Sauce Tin 400g",
                 orderPrice: 29,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput37.value
               });
             } else if(food === "Magic Moments Pink & White Marshmallows 120g") {
               order.push({
                 orderPic: "magic moments pink and white marshmallows 120g.jpg",
                 orderName: "Magic Moments Pink & White Marshmallows 120g",
                 orderPrice: 17,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput38.value
               });
             } else if(food === "Crystal Valley Full Cream Long Life Milk 1L") {
               order.push({
                 orderPic: "milk 1l.jpg",
                 orderName: "Crystal Valley Full Cream Long Life Milk 1L",
                 orderPrice: 17,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput39.value
               });
             } else if(food === "Nyama Choma BBQ Spice 200g") {
               order.push({
                 orderPic: "nyama choma bbq spice 200g.jpg",
                 orderName: "Nyama Choma BBQ Spice 200g",
                 orderPrice: 16,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput40.value
               });
             } else if(food === "Rhodes Quality Tomato Paste Sachet 50g") {
               order.push({
                 orderPic: "rhodes tomato paste 50g.jpg",
                 orderName: "Rhodes Quality Tomato Paste Sachet 50g",
                 orderPrice: 5,
-                orderQuantity: quantityInput.value
+                orderQuantity: quantityInput41.value
+              });
+            } else if(food === "Ritebrand Long Life Full Cream Milk 6 x 1L") {
+              order.push({
+                orderPic: "ritebrand milk 6 x 1L.jpg",
+                orderName: "Ritebrand Long Life Full Cream Milk 6 x 1L",
+                orderPrice: 99,
+                orderQuantity: quantityInput42.value
+              });
+            } else if(food === "Ritebrand Mixed Frozen Vegetables 900g") {
+              order.push({
+                orderPic: "ritebrand mixed frozen vegetables 900g.jpg",
+                orderName: "Ritebrand Mixed Frozen Vegetables 900g",
+                orderPrice: 40,
+                orderQuantity: quantityInput43.value
+              });
+            } else if(food === "Ritebrand Smooth Peanut Butter 400g") {
+              order.push({
+                orderPic: "ritebrand smooth peanut butter 400g.jpg",
+                orderName: "Ritebrand Smooth Peanut Butter 400g",
+                orderPrice: 39,
+                orderQuantity: quantityInput44.value
+              });
+            } else if(food === "Sasko More Slices Brown Bread Loaf 700g") {
+              order.push({
+                orderPic: "sasko brown bread loaf 700g.jpg",
+                orderName: "Sasko More Slices Brown Bread Loaf 700g",
+                orderPrice: 17,
+                orderQuantity: quantityInput45.value
+              });
+            } else if(food === "Sasko Cake Wheat Flour Bag 2,5kg") {
+              order.push({
+                orderPic: "sasko wheat flour 2,5kg.jpg",
+                orderName: "Sasko Cake Wheat Flour Bag 2,5kg",
+                orderPrice: 42,
+                orderQuantity: quantityInput46.value
+              });
+            } else if(food === "Golden Cloud Cake Wheat Flour 2,5kg") {
+              order.push({
+                orderPic: "wheat flour.jpg",
+                orderName: "Golden Cloud Cake Wheat Flour 2,5kg",
+                orderPrice: 43,
+                orderQuantity: quantityInput47.value
+              });
+            } else if(food === "White Mushrooms Pack 250g") {
+              order.push({
+                orderPic: "white mushrooms 250g.jpg",
+                orderName: "White Mushrooms Pack 250g",
+                orderPrice: 20,
+                orderQuantity: quantityInput48.value
               });
             }
         localStorage.setItem("order", JSON.stringify(order));
@@ -935,10 +900,18 @@
         
       });
 
+      console.log(products.length);
+
+      orderBtn.addEventListener('click', () => {
+        for(let i = 0; i < order.length; i++){
+          orderInput.value += ` Order Pic: ${order[i].orderPic}, Order Name: ${order[i].orderName}, Order Price: R${order[i].orderPrice}, Quantity: ${order[i].orderQuantity} `;
+        };
+        
+      });
+      
+      orderInput.classList.add('hide');
+
       window.onload = () => {
         searchWrapper.classList.add('hide');
         orderWrapper.classList.add('hide');
       }
-    </script>
-  </body>
-</html>
