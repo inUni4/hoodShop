@@ -256,3 +256,48 @@ input{
   font-weight: 500;
   color: white;
 }
+.cart-money{
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+.cart-amount{
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+.total-text{
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+.order-details-wrapper{
+  position: absolute;
+  top: 10%;
+  width: 50%;
+  background-color: black;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 60px;
+  transition: all ease 0.3s;
+}
+.send-btn{
+  width: 80%;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.send-btn:active{
+  transform: scale(0.9);
+}
