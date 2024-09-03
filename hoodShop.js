@@ -6,8 +6,8 @@ productInput = document.querySelector('.product-input'),
 findBtn = document.querySelector('.find-btn'),
 searchWrapper = document.querySelector('.search-wrapper'),
 headerWrapper = document.querySelector('.header-wrapper'),
-cartBtn = document.querySelector('.cart-btn');
-const quantityInput = document.querySelector('.quantity-input'),
+cartBtn = document.querySelector('.cart-btn'),
+quantityInput = document.querySelector('.quantity-input'),
 quantityInput1 = document.querySelector('.quantity-input1'),
 quantityInput2 = document.querySelector('.quantity-input2'),
 quantityInput3 = document.querySelector('.quantity-input3'),
@@ -148,9 +148,11 @@ orderWrapper = document.querySelector('.order-wrapper'),
 cartMoney = document.querySelector('.cart-money'),
 cartAmount = document.querySelector('.cart-amount'),
 totalText = document.querySelector('.total-text'),
-orderNumber = document.querySelector('.order-number');
-const orderBtn = document.querySelector('.order-btn'),
-orderDetailsWrapper = document.querySelector('.order-details-wrapper');
+orderNumber = document.querySelector('.order-number'),
+orderBtn = document.querySelector('.order-btn'),
+orderDetailsWrapper = document.querySelector('.order-details-wrapper'),
+orderInputting = document.querySelector('.order-inputting'),
+copyBtn = document.querySelector('.copy-btn');
 
       const products = [
         {
@@ -1803,6 +1805,17 @@ orderDetailsWrapper = document.querySelector('.order-details-wrapper');
                                       }
         localStorage.setItem("order", JSON.stringify(order));
       };
+      function addOrder() {
+        for(let i = 0; i < order.length; i++) {
+          orderInputting.value += `${order[i].orderName}, R${order[i].orderPrice}, Quantity: ${order[i].orderQuantity}`;
+        };
+      };
+      addOrder();
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(orderInputting.value).then(() => {
+          alert("Text copied");
+        });
+      });
 
       function removeOrder() {
         localStorage.clear();
@@ -1817,15 +1830,24 @@ orderDetailsWrapper = document.querySelector('.order-details-wrapper');
       };
 
       orderBtn.addEventListener('click', () => {
-        productWrapper.classList.add('hide');
-        orderWrapper.classList.add('hide');
-        orderDetailsWrapper.classList.remove('hide');
+        if(!orderBtn.classList.contains('order-press')) {
+          productWrapper.classList.add('hide');
+          orderWrapper.classList.add('hide');
+          orderBtn.classList.add('order-press');
+          orderDetailsWrapper.classList.remove('hide');
 
-        for(let i = 0; i < order.length; i++) {
-          orderDetailsWrapper.innerHTML += `<p class="product-name">${order[i].orderName}</p>
-                                          <p class="product-price">R${order[i].orderPrice}</p>
-                                          <p class="quantity-text">Quantity: ${order[i].orderQuantity}</p>`;
-        };
+          for(let i = 0; i < order.length; i++) {
+            orderDetailsWrapper.innerHTML += `<p class="product-name">${order[i].orderName}</p>
+                                            <p class="product-price">R${order[i].orderPrice}</p>
+                                            <p class="quantity-text">Quantity: ${order[i].orderQuantity}</p>`;
+          };
+        } else {
+          productWrapper.classList.remove('hide');
+          orderWrapper.classList.add('hide');
+          orderBtn.classList.remove('order-press');
+          orderDetailsWrapper.classList.add('hide');
+        }
+        
         
       });
 
@@ -1875,5 +1897,6 @@ orderDetailsWrapper = document.querySelector('.order-details-wrapper');
       window.onload = () => {
         searchWrapper.classList.add('hide');
         orderWrapper.classList.add('hide');
+        orderInputting.classList.add('hide'); 
         orderDetailsWrapper.classList.add('hide');
       }
