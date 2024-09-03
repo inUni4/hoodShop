@@ -45,7 +45,7 @@ body{
   width: 100%;
   box-sizing: border-box;
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,6 +138,11 @@ input{
 }
 .order-btn:active{
   transform: scale(0.9);
+}
+.order-press{
+  background-color: white;
+  border : rgb(2, 207, 2);
+  color: rgb(2, 207, 2);
 }
 
 .my-btn{
@@ -300,4 +305,25 @@ input{
 }
 .send-btn:active{
   transform: scale(0.9);
+}
+.copy-btn{
+  width: 80%;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: all ease 0.3s;
+}
+.copy-btn:active{
+  transform: scale(0.9);
+}
+.order-inputting{
+  height:1px;
+  width: 0.1%;
+  padding: 0;
 }
