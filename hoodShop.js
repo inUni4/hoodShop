@@ -153,6 +153,7 @@ orderBtn = document.querySelector('.order-btn'),
 orderDetailsWrapper = document.querySelector('.order-details-wrapper'),
 orderInputting = document.querySelector('.order-inputting'),
 copyBtn = document.querySelector('.copy-btn');
+const myOrderNumber = document.querySelector('.my-order-number');
 
       const products = [
         {
@@ -1859,7 +1860,10 @@ copyBtn = document.querySelector('.copy-btn');
           myMoney();
           cartMoney.textContent = `R${money}`;
           if(order.length > 15) {
-            deliveryFee = deliveryFee * 2;
+            deliveryFee = deliveryFee + 7;
+            cartAmount.textContent = `R${deliveryFee}`;
+          } else if(order.length > 30) {
+            deliveryFee = deliveryFee + 7;
             cartAmount.textContent = `R${deliveryFee}`;
           } else if(order.length == 0) {
             deliveryFee = 0;
@@ -1892,6 +1896,7 @@ copyBtn = document.querySelector('.copy-btn');
       });
 
       console.log(products.length);
+      myOrderNumber.textContent = order.length;
       
 
       window.onload = () => {
