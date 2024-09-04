@@ -856,952 +856,952 @@ const myOrderNumber = document.querySelector('.my-order-number');
             orderPic: "albany brown bread.jpg",
             orderName: "Albany Everyday Brown Bread Loaf 700g",
             orderPrice: 17,
-            orderQuantity: quantityInput.value
+            orderQuantity: 1
           });
         } else if(food === "Albany Every Day Thick Sliced White Bread") {
           order.push({
             orderPic: "albany white.jpg",
             orderName: "Albany Every Day Thick Sliced White Bread",
             orderPrice: 18,
-            orderQuantity: quantityInput1.value
+            orderQuantity: 1
           });
           } else if(food === "Ritebrand Baked Beans in Tomato Sauce Can 410g") {
               order.push({
                 orderPic: "baked beans.jpg",
                 orderName: "Ritebrand Baked Beans in Tomato Sauce Can 410g",
                 orderPrice: 12,
-                orderQuantity: quantityInput2.value
+                orderQuantity: 1
               });
             } else if(food === "Blue Ribbon Sliced White Bread 700g") {
               order.push({
                 orderPic: "blue ribbon white.jpg",
                 orderName: "Blue Ribbon Sliced White Bread 700g",
                 orderPrice: 20,
-                orderQuantity: quantityInput3.value
+                orderQuantity: 1
               });
             } else if(food === "Selati Golden Brown Sugar 2kg") {
               order.push({
                 orderPic: "brown sugar.jpg",
                 orderName: "Selati Golden Brown Sugar 2kg",
                 orderPrice: 60,
-                orderQuantity: quantityInput4.value
+                orderQuantity: 1
               });
             } else if(food === "D'Lite 40% Fat Spread Brick 500g") {
               order.push({
                 orderPic: "fat spread brick.jpg",
                 orderName: "D'Lite 40% Fat Spread Brick 500g",
                 orderPrice: 15,
-                orderQuantity: quantityInput5.value
+                orderQuantity: 1
               });
             } else if(food === "Nulaid Large Eggs 18 Pack") {
               order.push({
                 orderPic: "large eggs.jpg",
                 orderName: "Nulaid Large Eggs 18 Pack",
                 orderPrice: 60,
-                orderQuantity: quantityInput6.value
+                orderQuantity: 1
               });
             } else if(food === "Loose Bananas Per kg") {
               order.push({
                 orderPic: "loose banana.jpg",
                 orderName: "Loose Bananas Per kg",
                 orderPrice: 17,
-                orderQuantity: quantityInput7.value
+                orderQuantity: 1
               });
             } else if(food === "Mr.Pasta Macaroni Pasta 500g") {
               order.push({
                 orderPic: "macaroni.jpg",
                 orderName: "Mr.Pasta Macaroni Pasta 500g",
                 orderPrice: 16,
-                orderQuantity: quantityInput8.value
+                orderQuantity: 1
               });
             } else if(food === "Farmer's Choice Frozen Mixed Chicken Portions with Brine Based Mixture 5kg") {
               order.push({
                 orderPic: "mixed chicken portions.jpg",
                 orderName: "Farmer's Choice Frozen Mixed Chicken Portions with Brine Based Mixture 5kg",
                 orderPrice: 235,
-                orderQuantity: quantityInput9.value
+                orderQuantity: 1
               });
             } else if(food === "Potatoes Pack 2kg") {
               order.push({
                 orderPic: "potato pack 2kg.jpg",
                 orderName: "Potatoes Pack 2kg",
                 orderPrice: 30,
-                orderQuantity: quantityInput10.value
+                orderQuantity: 1
               });
             } else if(food === "Potatoes Sock 7kg") {
               order.push({
                 orderPic: "potato sock.jpg",
                 orderName: "Potatoes Sock 7kg",
                 orderPrice: 80,
-                orderQuantity: quantityInput11.value
+                orderQuantity: 1
               });
             } else if(food === "SASKO Low G.I Dumpy Oats & Honey Flavoured White Bread 700g") {
               order.push({
                 orderPic: "sasko low g.i white bread.jpg",
                 orderName: "SASKO Low G.I Dumpy Oats & Honey Flavoured White Bread 700g",
                 orderPrice: 24,
-                orderQuantity: quantityInput12.value
+                orderQuantity: 1
               });
             } else if(food === "Mr.Pasta Spaghetti Pasta 500g") {
               order.push({
                 orderPic: "spaghetti.jpg",
                 orderName: "Mr.Pasta Spaghetti Pasta 500g",
                 orderPrice: 16,
-                orderQuantity: quantityInput13.value
+                orderQuantity: 1
               });
             } else if(food === "Spekko Long Grain Parboiled White Rice Bag 2kg") {
               order.push({
                 orderPic: "spekko parboiled white rice.jpg",
                 orderName: "Spekko Long Grain Parboiled White Rice Bag 2kg",
                 orderPrice: 50,
-                orderQuantity: quantityInput14.value
+                orderQuantity: 1
               });
             } else if(food === "Standard White Bread 600g") {
               order.push({
                 orderPic: "standard white bread.jpg",
                 orderName: "Standard White Bread 600g",
                 orderPrice: 12,
-                orderQuantity: quantityInput15.value
+                orderQuantity: 1
               });
             } else if(food === "Ritebrand Sunflower Seed Oil 4L") {
               order.push({
                 orderPic: "sunflower seed oil 4l.jpg",
                 orderName: "Ritebrand Sunflower Seed Oil 4L",
                 orderPrice: 130,
-                orderQuantity: quantityInput16.value
+                orderQuantity: 1
               });
             } else if(food === "Sunfoil Pure Sunflower Seed Oil 750ml") {
               order.push({
                 orderPic: "sunflower seed oil 750ml.jpg",
                 orderName: "Sunfoil Pure Sunflower Seed Oil 750ml",
                 orderPrice: 37,
-                orderQuantity: quantityInput17.value
+                orderQuantity: 1
               });
             } else if(food === "Weet-Bix Wholegrain Wheat Biscuits 450g") {
               order.push({
                 orderPic: "weet bix 450g.jpg",
                 orderName: "Weet-Bix Wholegrain Wheat Biscuits 450g",
                 orderPrice: 37,
-                orderQuantity: quantityInput18.value
+                orderQuantity: 1
               });
             } else if(food === "White Hamburger Roll") {
               order.push({
                 orderPic: "white hamburger roll.jpg",
                 orderName: "White Hamburger Roll",
                 orderPrice: 3,
-                orderQuantity: quantityInput19.value
+                orderQuantity: 1
               });
             } else if(food === "White Maize Bread 600g") {
               order.push({
                 orderPic: "white maize bread.jpg",
                 orderName: "White Maize Bread 600g",
                 orderPrice: 10,
-                orderQuantity: quantityInput20.value
+                orderQuantity: 1
               });
             } else if(food === "White Star Super Maize Meal 5kg") {
               order.push({
                 orderPic: "white star super maize meal 5kg.jpg",
                 orderName: "White Star Super Maize Meal 5kg",
                 orderPrice: 60,
-                orderQuantity: quantityInput21.value
+                orderQuantity: 1
               });
             } else if(food === "Darling Amasi Maas Bottle 2L") {
               order.push({
                 orderPic: "amasi 2l.jpg",
                 orderName: "Darling Amasi Maas Bottle 2L",
                 orderPrice: 37,
-                orderQuantity: quantityInput22.value
+                orderQuantity: 1
               });
             } else if(food === "Baumann's Marie Bisquits 150g") {
               order.push({
                 orderPic: "baumanns marie biscuits 150g.jpg",
                 orderName: "Baumann's Marie Bisquits 150g",
                 orderPrice: 15,
-                orderQuantity: quantityInput23.value
+                orderQuantity: 1
               });
             } else if(food === "Beef Potjiekos Per kg") {
               order.push({
                 orderPic: "beef potjiekos.jpg",
                 orderName: "Beef Potjiekos Per kg",
                 orderPrice: 100,
-                orderQuantity: quantityInput24.value
+                orderQuantity: 1
               });
             } else if(food === "Benny Chicken Flavoured Stock Powder 17g") {
               order.push({
                 orderPic: "benny chicken stock powder 17g.jpg",
                 orderName: "Benny Chicken Flavoured Stock Powder 17g",
                 orderPrice: 2,
-                orderQuantity: quantityInput25.value
+                orderQuantity: 1
               });
             } else if(food === "Rebertsons Coarse Black Pepper Compound Envelope 7g") {
               order.push({
                 orderPic: "black pepper.jpg",
                 orderName: "Rebertsons Coarse Black Pepper Compound Envelope 7g",
                 orderPrice: 4,
-                orderQuantity: quantityInput26.value
+                orderQuantity: 1
               });
             } else if(food === "Cerebos Iodated Sea Salt 500g") {
               order.push({
                 orderPic: "cerebos iodated sea salt 500g.jpg",
                 orderName: "Cerebos Iodated Sea Salt 500g",
                 orderPrice: 11,
-                orderQuantity: quantityInput27.value
+                orderQuantity: 1
               });
             } else if(food === "Clover Classic Assorted Low Fat Flavoured Dairy Snack 6 x 100g") {
               order.push({
                 orderPic: "clover classic dairy snack 6 x 100g.jpg",
                 orderName: "Clover Classic Assorted Low Fat Flavoured Dairy Snack 6 x 100g",
                 orderPrice: 23,
-                orderQuantity: quantityInput28.value
+                orderQuantity: 1
               });
             } else if(food === "Crisp Lettuce Head Pack") {
               order.push({
                 orderPic: "crisp lettuce head pack.jpg",
                 orderName: "Crisp Lettuce Head Pack",
                 orderPrice: 19,
-                orderQuantity: quantityInput29.value
+                orderQuantity: 1
               });
             } else if(food === "English Cucumber Single") {
               order.push({
                 orderPic: "english cucumber single.jpg",
                 orderName: "English Cucumber Single",
                 orderPrice: 19,
-                orderQuantity: quantityInput30.value
+                orderQuantity: 1
               });
             } else if(food === "Excella Rich & Creamy Mayonnaise 750g") {
               order.push({
                 orderPic: "excella mayonnaise 750g.jpg",
                 orderName: "Excella Rich & Creamy Mayonnaise 750g",
                 orderPrice: 39,
-                orderQuantity: quantityInput31.value
+                orderQuantity: 1
               });
             } else if(food === "Crystal Valley Gouda Flavoured Full Cream Processed Cheese Slices 9 Pack") {
               order.push({
                 orderPic: "gouda cheese.jpg",
                 orderName: "Crystal Valley Gouda Flavoured Full Cream Processed Cheese Slices 9 Pack",
                 orderPrice: 30,
-                orderQuantity: quantityInput32.value
+                orderQuantity: 1
               });
             } else if(food === "White Hotdog Roll 6 Pack") {
               order.push({
                 orderPic: "hot dog roll 6 pack.jpg",
                 orderName: "White Hotdog Roll 6 Pack",
                 orderPrice: 15,
-                orderQuantity: quantityInput33.value
+                orderQuantity: 1
               });
             } else if(food === "Huletts White Sugar 2,5kg") {
               order.push({
                 orderPic: "huletts white sugar 2,5kg.jpg",
                 orderName: "Huletts White Sugar 2,5kg",
                 orderPrice: 64,
-                orderQuantity: quantityInput34.value
+                orderQuantity: 1
               });
             } else if(food === "Pink Lamington Snowball") {
               order.push({
                 orderPic: "lamington snowball.jpg",
                 orderName: "Pink Lamington Snowball",
                 orderPrice: 10,
-                orderQuantity: quantityInput35.value
+                orderQuantity: 1
               });
             } else if(food === "Large Unwrapped Cabbage Single") {
               order.push({
                 orderPic: "large unwrapped cabbage.jpg",
                 orderName: "Large Unwrapped Cabbage Single",
                 orderPrice: 25,
-                orderQuantity: quantityInput36.value
+                orderQuantity: 1
               });
             } else if(food === "Lucky Star Pilchards In Tomato Sauce Tin 400g") {
               order.push({
                 orderPic: "Luck Star pilchards 400g.jpg",
                 orderName: "Lucky Star Pilchards In Tomato Sauce Tin 400g",
                 orderPrice: 29,
-                orderQuantity: quantityInput37.value
+                orderQuantity: 1
               });
             } else if(food === "Magic Moments Pink & White Marshmallows 120g") {
               order.push({
                 orderPic: "magic moments pink and white marshmallows 120g.jpg",
                 orderName: "Magic Moments Pink & White Marshmallows 120g",
                 orderPrice: 17,
-                orderQuantity: quantityInput38.value
+                orderQuantity: 1
               });
             } else if(food === "Crystal Valley Full Cream Long Life Milk 1L") {
               order.push({
                 orderPic: "milk 1l.jpg",
                 orderName: "Crystal Valley Full Cream Long Life Milk 1L",
                 orderPrice: 17,
-                orderQuantity: quantityInput39.value
+                orderQuantity: 1
               });
             } else if(food === "Nyama Choma BBQ Spice 200g") {
               order.push({
                 orderPic: "nyama choma bbq spice 200g.jpg",
                 orderName: "Nyama Choma BBQ Spice 200g",
                 orderPrice: 16,
-                orderQuantity: quantityInput40.value
+                orderQuantity: 1
               });
             } else if(food === "Rhodes Quality Tomato Paste Sachet 50g") {
               order.push({
                 orderPic: "rhodes tomato paste 50g.jpg",
                 orderName: "Rhodes Quality Tomato Paste Sachet 50g",
                 orderPrice: 5,
-                orderQuantity: quantityInput41.value
+                orderQuantity: 1
               });
             } else if(food === "Ritebrand Long Life Full Cream Milk 6 x 1L") {
               order.push({
                 orderPic: "ritebrand milk 6 x 1L.jpg",
                 orderName: "Ritebrand Long Life Full Cream Milk 6 x 1L",
                 orderPrice: 99,
-                orderQuantity: quantityInput42.value
+                orderQuantity: 1
               });
             } else if(food === "Ritebrand Mixed Frozen Vegetables 900g") {
               order.push({
                 orderPic: "ritebrand mixed frozen vegetables 900g.jpg",
                 orderName: "Ritebrand Mixed Frozen Vegetables 900g",
                 orderPrice: 40,
-                orderQuantity: quantityInput43.value
+                orderQuantity: 1
               });
             } else if(food === "Ritebrand Smooth Peanut Butter 400g") {
               order.push({
                 orderPic: "ritebrand smooth peanut butter 400g.jpg",
                 orderName: "Ritebrand Smooth Peanut Butter 400g",
                 orderPrice: 39,
-                orderQuantity: quantityInput44.value
+                orderQuantity: 1
               });
             } else if(food === "Sasko More Slices Brown Bread Loaf 700g") {
               order.push({
                 orderPic: "sasko brown bread loaf 700g.jpg",
                 orderName: "Sasko More Slices Brown Bread Loaf 700g",
                 orderPrice: 17,
-                orderQuantity: quantityInput45.value
+                orderQuantity: 1
               });
             } else if(food === "Sasko Cake Wheat Flour Bag 2,5kg") {
               order.push({
                 orderPic: "sasko wheat flour 2,5kg.jpg",
                 orderName: "Sasko Cake Wheat Flour Bag 2,5kg",
                 orderPrice: 42,
-                orderQuantity: quantityInput46.value
+                orderQuantity: 1
               });
             } else if(food === "Golden Cloud Cake Wheat Flour 2,5kg") {
               order.push({
                 orderPic: "wheat flour.jpg",
                 orderName: "Golden Cloud Cake Wheat Flour 2,5kg",
                 orderPrice: 43,
-                orderQuantity: quantityInput47.value
+                orderQuantity: 1
               });
             } else if(food === "White Mushrooms Pack 250g") {
               order.push({
                 orderPic: "white mushrooms 250g.jpg",
                 orderName: "White Mushrooms Pack 250g",
                 orderPrice: 20,
-                orderQuantity: quantityInput48.value
+                orderQuantity: 1
               });
             } else if(food === "ALL GOLD Tomato Sauce Bottle 700ml") {
               order.push({
                 orderPic: "all gold tomato sauce 700ml.jpg",
                 orderName: "ALL GOLD Tomato Sauce Bottle 700ml",
                 orderPrice: 40,
-                orderQuantity: quantityInput49.value
+                orderQuantity: 1
               });
               } else if(food === "Avocados Pack 1kg") {
                   order.push({
                     orderPic: "avocados pack 1kg.jpg",
                     orderName: "Avocados Pack 1kg",
                     orderPrice: 25,
-                    orderQuantity: quantityInput50.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Bar-One Large Chocolate 52g") {
                   order.push({
                     orderPic: "bar one large chocolate 52g.jpg",
                     orderName: "Bar-One Large Chocolate 52g",
                     orderPrice: 14,
-                    orderQuantity: quantityInput51.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Beetroots Pack 1kg") {
                   order.push({
                     orderPic: "beetroot 1kg.jpg",
                     orderName: "Beetroots Pack 1kg",
                     orderPrice: 13,
-                    orderQuantity: quantityInput52.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Blossom Spread 25% Fat Spread 1kg") {
                   order.push({
                     orderPic: "blossom spread fat spread 1kg.jpg",
                     orderName: "Blossom Spread 25% Fat Spread 1kg",
                     orderPrice: 50,
-                    orderQuantity: quantityInput53.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Bokomo Original Corn Flakes 1kg") {
                   order.push({
                     orderPic: "bokomo corn flakes 1kg.jpg",
                     orderName: "Bokomo Original Corn Flakes 1kg",
                     orderPrice: 70,
-                    orderQuantity: quantityInput54.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Cadbury Crunchie Chocolate Bar 40g") {
                   order.push({
                     orderPic: "cadbury crunchie chocolate 40g.jpg",
                     orderName: "Cadbury Crunchie Chocolate Bar 40g",
                     orderPrice: 14,
-                    orderQuantity: quantityInput55.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Cadbury Lunch Bar Max Chocolate Bar 62g") {
                   order.push({
                     orderPic: "cadbury lunch bar max 62g.jpg",
                     orderName: "Cadbury Lunch Bar Max Chocolate Bar 62g",
                     orderPrice: 17,
-                    orderQuantity: quantityInput56.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Cadbury P.S. Milk Chocolate Bar 48g") {
                   order.push({
                     orderPic: "cadbury p.s milk chocolate 48g.jpg",
                     orderName: "Cadbury P.S. Milk Chocolate Bar 48g",
                     orderPrice: 14,
-                    orderQuantity: quantityInput57.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Carrots Pack 3kg") {
                   order.push({
                     orderPic: "carrots pack 3kg.jpg",
                     orderName: "Carrots Pack 3kg",
                     orderPrice: 35,
-                    orderQuantity: quantityInput58.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Cauliflower & Brocolli Pack") {
                   order.push({
                     orderPic: "cauliflower and brocolli pack.jpg",
                     orderName: "Cauliflower & Brocolli Pack",
                     orderPrice: 30,
-                    orderQuantity: quantityInput59.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Cheas Snaks Cheese Flavoured Maize Snack 135g") {
                   order.push({
                     orderPic: "cheas snaks cheese maize snack 135g.jpg",
                     orderName: "Cheas Snaks Cheese Flavoured Maize Snack 135g",
                     orderPrice: 15,
-                    orderQuantity: quantityInput60.value
+                    orderQuantity: 1
                   });
                 } else if(food === "Coney Roll Single") {
                   order.push({
                     orderPic: "coney roll single.jpg",
                     orderName: "Coney Roll Single",
                     orderPrice: 4,
-                    orderQuantity: quantityInput61.value
+                    orderQuantity: 1
                   });
                   } else if(food === "Danone NutriDay Strawberry, Banana And Mixed Fruit Flavoured Low Fat Dairy Snack 6 x 100g") {
                       order.push({
                         orderPic: "danone nutriday mixed flavoured dairy snack 6 x 100g.jpg",
                         orderName: "Danone NutriDay Strawberry, Banana And Mixed Fruit Flavoured Low Fat Dairy Snack 6 x 100g",
                         orderPrice: 23,
-                        orderQuantity: quantityInput62.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Doritos Sweet Chilli Pepper Flavoured Corn Chips 145g") {
                       order.push({
                         orderPic: "doritos sweet chilli pepper corn chips 145g.jpg",
                         orderName: "Doritos Sweet Chilli Pepper Flavoured Corn Chips 145g",
                         orderPrice: 23,
-                        orderQuantity: quantityInput63.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Fair Cape Dairies Chocolate Dessert 125ml") {
                       order.push({
                         orderPic: "fair cape dairies chocolate dessert 125ml.jpg",
                         orderName: "Fair Cape Dairies Chocolate Dessert 125ml",
                         orderPrice: 10,
-                        orderQuantity: quantityInput64.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Fresh Large French Loaf 400g") {
                       order.push({
                         orderPic: "fresh large french loaf 400g.jpg",
                         orderName: "Fresh Large French Loaf 400g",
                         orderPrice: 17,
-                        orderQuantity: quantityInput65.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Ghost Pops The Original Flavoured Maize Snack 100g") {
                       order.push({
                         orderPic: "ghost pops the original maize snack 100g.jpg",
                         orderName: "Ghost Pops The Original Flavoured Maize Snack 100g",
                         orderPrice: 16,
-                        orderQuantity: quantityInput66.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Gold Star Instant Yeast 10g") {
                       order.push({
                         orderPic: "gold star yeast 10g.jpg",
                         orderName: "Gold Star Instant Yeast 10g",
                         orderPrice: 7,
-                        orderQuantity: quantityInput67.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Green Peppers Bag") {
                       order.push({
                         orderPic: "green pepper.jpg",
                         orderName: "Green Peppers Bag",
                         orderPrice: 30,
-                        orderQuantity: quantityInput68.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Heavenly Hazel Heaven Chocolate Slab 80g") {
                       order.push({
                         orderPic: "heavenly chocolate slab 80g.jpg",
                         orderName: "Heavenly Hazel Heaven Chocolate Slab 80g",
                         orderPrice: 20,
-                        orderQuantity: quantityInput69.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Huletts White Sugar 10kg") {
                       order.push({
                         orderPic: "huletts white sugar 10kg.jpg",
                         orderName: "Huletts White Sugar 10kg",
                         orderPrice: 250,
-                        orderQuantity: quantityInput70.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Imana Super Stock Chill Beef Flavoured Cubes 12 Pack") {
                       order.push({
                         orderPic: "imana super stock chill beef cubes 12 pack.jpg",
                         orderName: "Imana Super Stock Chill Beef Flavoured Cubes 12 Pack",
                         orderPrice: 16,
-                        orderQuantity: quantityInput71.value
+                        orderQuantity: 1
                       });
                     } else if(food === "Jungle Oats 1kg") {
                       order.push({
                         orderPic: "jungle Oats 1kg.jpg",
                         orderName: "Jungle Oats 1kg",
                         orderPrice: 46,
-                        orderQuantity: quantityInput72.value
+                        orderQuantity: 1
                       });
                     } else if(food === "KitKat 4 Finger Milk Chocolate Bar 41.5g") {
                       order.push({
                         orderPic: "kitkat 4 finger milk chocolate 41.5g.jpg",
                         orderName: "KitKat 4 Finger Milk Chocolate Bar 41.5g",
                         orderPrice: 14,
-                        orderQuantity: quantityInput73.value
+                        orderQuantity: 1
                       });
                       } else if(food === "Knorr Brown Onion Thickening Soup 50g") {
                           order.push({
                             orderPic: "knorr brown onion soup 50g.jpg",
                             orderName: "Knorr Brown Onion Thickening Soup 50g",
                             orderPrice: 8,
-                            orderQuantity: quantityInput74.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Knorrox Beef Flavoured Stock Cubes 12 x 10g") {
                           order.push({
                             orderPic: "knorrox beef flavoured stock cubes 12 x 10g.jpg",
                             orderName: "Knorrox Beef Flavoured Stock Cubes 12 x 10g",
                             orderPrice: 19,
-                            orderQuantity: quantityInput75.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Knorrox Boerewors Flavoured Soya Mince 400g") {
                           order.push({
                             orderPic: "knorrox boerewors flavoured soya mince 400g.jpg",
                             orderName: "Knorrox Boerewors Flavoured Soya Mince 400g",
                             orderPrice: 33,
-                            orderQuantity: quantityInput76.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Knorrox Chilli Beef Flavoured Soya Mince 400g") {
                           order.push({
                             orderPic: "knorrox chilli beef soya mince 400g.jpg",
                             orderName: "Knorrox Chilli Beef Flavoured Soya Mince 400g",
                             orderPrice: 33,
-                            orderQuantity: quantityInput77.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Knorrox Mutton Flavoured Soya Mince 400g") {
                           order.push({
                             orderPic: "knorrox mutton flavoured soya mince 400g.jpg",
                             orderName: "Knorrox Mutton Flavoured Soya Mince 400g",
                             orderPrice: 33,
-                            orderQuantity: quantityInput78.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Lean Beef Mince Per kg") {
                           order.push({
                             orderPic: "lean beef mince per kg.jpg",
                             orderName: "Lean Beef Mince Per kg",
                             orderPrice: 110,
-                            orderQuantity: quantityInput79.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Lucky Star Pilchards in Hot Chilli Sauce") {
                           order.push({
                             orderPic: "lucky star pilchards in hot chili sauce.jpg",
                             orderName: "Lucky Star Pilchards in Hot Chilli Sauce",
                             orderPrice: 29,
-                            orderQuantity: quantityInput80.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Mixed Peppers Bag") {
                           order.push({
                             orderPic: "mixed pepper.jpg",
                             orderName: "Mixed Peppers Bag",
                             orderPrice: 30,
-                            orderQuantity: quantityInput81.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Mutton Pack Per kg") {
                           order.push({
                             orderPic: "mutton pack per kg.jpg",
                             orderName: "Mutton Pack Per kg",
                             orderPrice: 110,
-                            orderQuantity: quantityInput82.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Nosh Chocolate Bar 56g") {
                           order.push({
                             orderPic: "nosh chocolate 56g.jpg",
                             orderName: "Nosh Chocolate Bar 56g",
                             orderPrice: 13,
-                            orderQuantity: quantityInput83.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Onions Bag 3kg") {
                           order.push({
                             orderPic: "onions bag 3kg.jpg",
                             orderName: "Onions Bag 3kg",
                             orderPrice: 50,
-                            orderQuantity: quantityInput84.value
+                            orderQuantity: 1
                           });
                         } else if(food === "Onions Per KG") {
                           order.push({
                             orderPic: "onions per kg.jpg",
                             orderName: "Onions Per KG",
                             orderPrice: 18,
-                            orderQuantity: quantityInput85.value
+                            orderQuantity: 1
                           });
                           } else if(food === "OREO Original Biscuits 128g") {
                               order.push({
                                 orderPic: "oreo biscuits 128g.jpg",
                                 orderName: "OREO Original Biscuits 128g",
                                 orderPrice: 19,
-                                orderQuantity: quantityInput86.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Padkos Roasted & Salted Peanuts & Raisins 150g") {
                               order.push({
                                 orderPic: "padkos roasted & salted peanuts with raisins 150g.jpg",
                                 orderName: "Padkos Roasted & Salted Peanuts & Raisins 150g",
                                 orderPrice: 17,
-                                orderQuantity: quantityInput87.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Parmalat Single Cheese Slice") {
                               order.push({
                                 orderPic: "parmalat single cheese.jpg",
                                 orderName: "Parmalat Single Cheese Slice",
                                 orderPrice: 3,
-                                orderQuantity: quantityInput88.value
+                                orderQuantity: 1
                               });
                             } else if(food === "PIEMAN'S Pepper Steak Jumbo Pie Jumbo") {
                               order.push({
                                 orderPic: "piemans pepper steak jumbo pie.jpg",
                                 orderName: "PIEMAN'S Pepper Steak Jumbo Pie Jumbo",
                                 orderPrice: 20,
-                                orderQuantity: quantityInput89.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Rajah Flavourful & Mild Curry Powder Envelope 7g") {
                               order.push({
                                 orderPic: "rajah flavourful & mild curry powder 7g.jpg",
                                 orderName: "Rajah Flavourful & Mild Curry Powder Envelope 7g",
                                 orderPrice: 4,
-                                orderQuantity: quantityInput90.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Rajah Medium Curry Powder Envelope 7g") {
                               order.push({
                                 orderPic: "rajah medium curry powder 7g.jpg",
                                 orderName: "Rajah Medium Curry Powder Envelope 7g",
                                 orderPrice: 4,
-                                orderQuantity: quantityInput91.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Rajah Medium Curry Powder 50g") {
                               order.push({
                                 orderPic: "rajah medium curry powder 50g.jpg",
                                 orderName: "Rajah Medium Curry Powder 50g",
                                 orderPrice: 16,
-                                orderQuantity: quantityInput92.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Rajah Mild & Spicy Curry Powder Box 50g") {
                               order.push({
                                 orderPic: "rajah mild & spicy curry powder box 50g.jpg",
                                 orderName: "Rajah Mild & Spicy Curry Powder Box 50g",
                                 orderPrice: 16,
-                                orderQuantity: quantityInput93.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Rajah Mild & Spice Curry Powder Envelope 7g") {
                               order.push({
                                 orderPic: "rajah mild and spicy curry powder 7g.jpg",
                                 orderName: "Rajah Mild & Spice Curry Powder Envelope 7g",
                                 orderPrice: 4,
-                                orderQuantity: quantityInput94.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Ritebrand Brown Spirit Vinegar 750ml") {
                               order.push({
                                 orderPic: "ritebrand brown spirit vinegar 750ml.jpg",
                                 orderName: "Ritebrand Brown Spirit Vinegar 750ml",
                                 orderPrice: 14,
-                                orderQuantity: quantityInput95.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Ritebrand French Polony 750g") {
                               order.push({
                                 orderPic: "ritebrand french polony 750g.jpg",
                                 orderName: "Ritebrand French Polony 750g",
                                 orderPrice: 30,
-                                orderQuantity: quantityInput96.value
+                                orderQuantity: 1
                               });
                             } else if(food === "Robertsons Chicken Spice Refill 84g") {
                               order.push({
                                 orderPic: "robertsons chicken spice refill 84g.jpg",
                                 orderName: "Robertsons Chicken Spice Refill 84g",
                                 orderPrice: 20,
-                                orderQuantity: quantityInput97.value
+                                orderQuantity: 1
                               });
                               } else if(food === "Robertsons Peri-Peri Spice Envelope 7g") {
                                   order.push({
                                     orderPic: "robertsons peri peri spice 7g.jpg",
                                     orderName: "Robertsons Peri-Peri Spice Envelope 7g",
                                     orderPrice: 4,
-                                    orderQuantity: quantityInput98.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Royco Brown Onion Soup Packet 50g") {
                                   order.push({
                                     orderPic: "royco brown soup 50g.jpg",
                                     orderName: "Royco Brown Onion Soup Packet 50g",
                                     orderPrice: 7,
-                                    orderQuantity: quantityInput99.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Royco Rich Oxtail Soup Packet 50g") {
                                   order.push({
                                     orderPic: "royco rich oxtail soup packet 50g.jpg",
                                     orderName: "Royco Rich Oxtail Soup Packet 50g",
                                     orderPrice: 7,
-                                    orderQuantity: quantityInput100.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "School Buns 10 Pack") {
                                   order.push({
                                     orderPic: "school buns 10 pack.jpg",
                                     orderName: "School Buns 10 Pack",
                                     orderPrice: 13,
-                                    orderQuantity: quantityInput101.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Spinach Bag 300g") {
                                   order.push({
                                     orderPic: "spinach bag 300g.jpg",
                                     orderName: "Spinach Bag 300g",
                                     orderPrice: 17,
-                                    orderQuantity: quantityInput102.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Stewing Beef Per kg") {
                                   order.push({
                                     orderPic: "stewing beef per kg.jpg",
                                     orderName: "Stewing Beef Per kg",
                                     orderPrice: 100,
-                                    orderQuantity: quantityInput103.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Sweetcorn 4 Pack") {
                                   order.push({
                                     orderPic: "sweetcorn 4 pack.jpg",
                                     orderName: "Sweetcorn 4 Pack",
                                     orderPrice: 30,
-                                    orderQuantity: quantityInput104.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Tex Large Chocolate Bar 40g") {
                                   order.push({
                                     orderPic: "tex large chocolate 40g.jpg",
                                     orderName: "Tex Large Chocolate Bar 40g",
                                     orderPrice: 14,
-                                    orderQuantity: quantityInput105.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Tomatoes Bag 1kg") {
                                   order.push({
                                     orderPic: "tomatoes.jpg",
                                     orderName: "Tomatoes Bag 1kg",
                                     orderPrice: 25,
-                                    orderQuantity: quantityInput106.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Welington's New Recipe Tomato Sauce 700ml") {
                                   order.push({
                                     orderPic: "wellington's tomato sauce 700ml.jpg",
                                     orderName: "Welington's New Recipe Tomato Sauce 700ml",
                                     orderPrice: 39,
-                                    orderQuantity: quantityInput107.value
+                                    orderQuantity: 1
                                   });
                                 } else if(food === "Coca-Cola Original Less Sugar Soft Drink Bottle 2L") {
                                     order.push({
                                       orderPic: "coca-cola original 2l.jpg",
                                       orderName: "Coca-Cola Original Less Sugar Soft Drink Bottle 2L",
                                       orderPrice: 27,
-                                      orderQuantity: quantityInput108.value
+                                      orderQuantity: 1
                                     });
                                   } else if(food === "Coca-Cola Original Soft Drink Bottle 440ml") {
                                         order.push({
                                           orderPic: "coca-cola original 440ml.jpg",
                                           orderName: "Coca-Cola Original Soft Drink Bottle 440ml",
                                           orderPrice: 14,
-                                          orderQuantity: quantityInput109.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Cremora Coffee Creamer Box 750g") {
                                         order.push({
                                           orderPic: "cremora coffee creamer box 750g.jpg",
                                           orderName: "Cremora Coffee Creamer Box 750g",
                                           orderPrice: 67,
-                                          orderQuantity: quantityInput110.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Darling Fruit Worx Mango & Peach Juice 3L") {
                                         order.push({
                                           orderPic: "darling fruit worx mango and peach juice 3l.jpg",
                                           orderName: "Darling Fruit Worx Mango & Peach Juice 3L",
                                           orderPrice: 45,
-                                          orderQuantity: quantityInput111.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Ellis Brown Coffee Creamer 750g") {
                                         order.push({
                                           orderPic: "ellis brown coffee creamer 750g.jpg",
                                           orderName: "Ellis Brown Coffee Creamer 750g",
                                           orderPrice: 65,
-                                          orderQuantity: quantityInput112.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Glen African Blend Tea Bags 100 Pack") {
                                         order.push({
                                           orderPic: "glen african blend tea bags 100 pack.jpg",
                                           orderName: "Glen African Blend Tea Bags 100 Pack",
                                           orderPrice: 35,
-                                          orderQuantity: quantityInput113.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Jacobs Original 3-In-1 Instant Coffee Stick 18g") {
                                         order.push({
                                           orderPic: "jacobs original 3in1 instant coffee stick 18g.jpg",
                                           orderName: "Jacobs Original 3-In-1 Instant Coffee Stick 18g",
                                           orderPrice: 5,
-                                          orderQuantity: quantityInput114.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Jive Cream Soda Flavoured Soft Drink Bottle 2L") {
                                         order.push({
                                           orderPic: "jive cream soda drink 2l.jpg",
                                           orderName: "Jive Cream Soda Flavoured Soft Drink Bottle 2L",
                                           orderPrice: 15,
-                                          orderQuantity: quantityInput115.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Jive Pine Whizz Flavoured Soft Drink Bottle 2L") {
                                         order.push({
                                           orderPic: "jive pine whizz drink 2l.jpg",
                                           orderName: "Jive Pine Whizz Flavoured Soft Drink Bottle 2L",
                                           orderPrice: 15,
-                                          orderQuantity: quantityInput116.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Jive Pineapple Spike Flavoured Soft Drink Bottle 2L") {
                                         order.push({
                                           orderPic: "jive pineapple spike drink 2l.jpg",
                                           orderName: "Jive Pineapple Spike Flavoured Soft Drink Bottle 2L",
                                           orderPrice: 15,
-                                          orderQuantity: quantityInput117.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Joko Strong Quality Teabags 100 Pack") {
                                         order.push({
                                           orderPic: "joko strong qulity teabags 100 pack.jpg",
                                           orderName: "Joko Strong Quality Teabags 100 Pack",
                                           orderPrice: 65,
-                                          orderQuantity: quantityInput118.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Monster Energy Drink 500ml") {
                                         order.push({
                                           orderPic: "monster energy drink 500ml.jpg",
                                           orderName: "Monster Energy Drink 500ml",
                                           orderPrice: 19,
-                                          orderQuantity: quantityInput119.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "NESCAFE Classic Instant Coffee 200g") {
                                         order.push({
                                           orderPic: "nescafe classic instant coffee 200g.jpg",
                                           orderName: "NESCAFE Classic Instant Coffee 200g",
                                           orderPrice: 125,
-                                          orderQuantity: quantityInput120.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "NESCAFE ORIGINAL 3-In-1 Instant Coffee 17.5g") {
                                         order.push({
                                           orderPic: "nescafe original 3in1 instant coffe 17.5g.jpg",
                                           orderName: "NESCAFE ORIGINAL 3-In-1 Instant Coffee 17.5g",
                                           orderPrice: 6,
-                                          orderQuantity: quantityInput121.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "NESCAFE RICOFFY Instant Coffee 100g") {
                                         order.push({
                                           orderPic: "nescafe ricoffy instant coffee 100g.jpg",
                                           orderName: "NESCAFE RICOFFY Instant Coffee 100g",
                                           orderPrice: 35,
-                                          orderQuantity: quantityInput122.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "NESCAFE RICOFFY Instant Coffee 250g") {
                                         order.push({
                                           orderPic: "nescafe ricoffy instant coffee 250g.jpg",
                                           orderName: "NESCAFE RICOFFY Instant Coffee 250g",
                                           orderPrice: 70,
-                                          orderQuantity: quantityInput123.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "NESCAFE RICOFFY Soluble Chicory & Coffee Granules Refill 800g") {
                                         order.push({
                                           orderPic: "nescafe ricoffy refill 800g.jpg",
                                           orderName: "NESCAFE RICOFFY Soluble Chicory & Coffee Granules Refill 800g",
                                           orderPrice: 130,
-                                          orderQuantity: quantityInput124.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Power Play Original Energy Drink 440ml") {
                                         order.push({
                                           orderPic: "power play original energy drink 440ml.jpg",
                                           orderName: "Power Play Original Energy Drink 440ml",
                                           orderPrice: 15,
-                                          orderQuantity: quantityInput125.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Reboost Original Flavour Energy Drink 500ml") {
                                         order.push({
                                           orderPic: "reboost original energy drink 500ml.jpg",
                                           orderName: "Reboost Original Flavour Energy Drink 500ml",
                                           orderPrice: 11,
-                                          orderQuantity: quantityInput126.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Ritebrand Peach & Apricot Flavoured Dairy Blend Concentrate 1L") {
                                         order.push({
                                           orderPic: "ritebrand peach and apricot blend 1l.jpg",
                                           orderName: "Ritebrand Peach & Apricot Flavoured Dairy Blend Concentrate 1L",
                                           orderPrice: 13,
-                                          orderQuantity: quantityInput127.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Spar-Letta Soft Drink Creme Soda Bottle 2L") {
                                         order.push({
                                           orderPic: "spar-letta drink creme soda 2l.jpg",
                                           orderName: "Spar-Letta Soft Drink Creme Soda Bottle 2L",
                                           orderPrice: 17,
-                                          orderQuantity: quantityInput128.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Spar-Letta Iron Brew Flavour Soft Drink Bottle 2L") {
                                         order.push({
                                           orderPic: "spar-letta iron brew drink 2l.jpg",
                                           orderName: "Spar-Letta Iron Brew Flavour Soft Drink Bottle 2L",
                                           orderPrice: 17,
-                                          orderQuantity: quantityInput129.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Spar-Letta Pine Nut Flavoured Soft Drink Bottle 2L") {
                                         order.push({
                                           orderPic: "spar-letta pine nut drink 2l.jpg",
                                           orderName: "Spar-Letta Pine Nut Flavoured Soft Drink Bottle 2L",
                                           orderPrice: 17,
-                                          orderQuantity: quantityInput130.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Spar-Letta Soft Drink Sparberry Bottle 2L") {
                                         order.push({
                                           orderPic: "spar-letta sparberry 2l.jpg",
                                           orderName: "Spar-Letta Soft Drink Sparberry Bottle 2L",
                                           orderPrice: 17,
-                                          orderQuantity: quantityInput131.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Steri Stumpie Chocolate Flavoured Milk 350ml") {
                                         order.push({
                                           orderPic: "steri stumpie chocolate milk 350ml.jpg",
                                           orderName: "Steri Stumpie Chocolate Flavoured Milk 350ml",
                                           orderPrice: 17,
-                                          orderQuantity: quantityInput132.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Twist Lemon Flavoured Soft Drink Bottle 2L") {
                                         order.push({
                                           orderPic: "twist lemon drink 2l.jpg",
                                           orderName: "Twist Lemon Flavoured Soft Drink Bottle 2L",
                                           orderPrice: 17,
-                                          orderQuantity: quantityInput133.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Cerebos Iodated Sea Salt 500g") {
                                         order.push({
                                           orderPic: "cerebos iodated sea salt 500g.jpg",
                                           orderName: "Cerebos Iodated Sea Salt 500g",
                                           orderPrice: 11,
-                                          orderQuantity: quantityInput134.value
+                                          orderQuantity: 1
                                         });
                                       } else if(food === "Clover Classic Assorted Low Fat Flavoured Dairy Snack 6 x 100g") {
                                         order.push({
                                           orderPic: "clover classic dairy snack 6 x 100g.jpg",
                                           orderName: "Clover Classic Assorted Low Fat Flavoured Dairy Snack 6 x 100g",
                                           orderPrice: 23,
-                                          orderQuantity: quantityInput135.value
+                                          orderQuantity: 1
                                         });
                                       }
         localStorage.setItem("order", JSON.stringify(order));
@@ -1814,7 +1814,7 @@ const myOrderNumber = document.querySelector('.my-order-number');
       addOrder();
       copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(orderInputting.value).then(() => {
-          alert("Text copied");
+          alert("Order copied to clipboard!");
         });
       });
 
@@ -1823,10 +1823,16 @@ const myOrderNumber = document.querySelector('.my-order-number');
       }
 
       let money = 0,
-          deliveryFee = 34;
+          deliveryFee = 34,
+          theQuantity = 0;
       function myMoney() {
         for(let i = 0; i < order.length; i++) {
           money += order[i].orderPrice;
+        };
+      };
+      function myQuantity() {
+        for(let i = 0; i < order.length; i++) {
+          theQuantity += Number(order[i].orderQuantity);
         };
       };
 
@@ -1896,7 +1902,8 @@ const myOrderNumber = document.querySelector('.my-order-number');
       });
 
       console.log(products.length);
-      myOrderNumber.textContent = order.length;
+      myQuantity();
+      myOrderNumber.textContent = theQuantity;
       
 
       window.onload = () => {
@@ -1904,4 +1911,140 @@ const myOrderNumber = document.querySelector('.my-order-number');
         orderWrapper.classList.add('hide');
         orderInputting.classList.add('hide'); 
         orderDetailsWrapper.classList.add('hide');
+        quantityInput.classList.add('hide');
+        quantityInput1.classList.add('hide');
+        quantityInput2.classList.add('hide');
+        quantityInput3.classList.add('hide');
+        quantityInput4.classList.add('hide');
+        quantityInput5.classList.add('hide');
+        quantityInput6.classList.add('hide');
+        quantityInput7.classList.add('hide');
+        quantityInput8.classList.add('hide');
+        quantityInput9.classList.add('hide');
+        quantityInput10.classList.add('hide');
+        quantityInput11.classList.add('hide');
+        quantityInput12.classList.add('hide');
+        quantityInput13.classList.add('hide');
+        quantityInput14.classList.add('hide');
+        quantityInput15.classList.add('hide');
+        quantityInput16.classList.add('hide');
+        quantityInput17.classList.add('hide');
+        quantityInput18.classList.add('hide');
+        quantityInput19.classList.add('hide');
+        quantityInput20.classList.add('hide');
+        quantityInput21.classList.add('hide');
+        quantityInput22.classList.add('hide');
+        quantityInput23.classList.add('hide');
+        quantityInput24.classList.add('hide');
+        quantityInput25.classList.add('hide');
+        quantityInput26.classList.add('hide');
+        quantityInput27.classList.add('hide');
+        quantityInput28.classList.add('hide');
+        quantityInput29.classList.add('hide');
+        quantityInput30.classList.add('hide');
+        quantityInput31.classList.add('hide');
+        quantityInput32.classList.add('hide');
+        quantityInput33.classList.add('hide');
+        quantityInput34.classList.add('hide');
+        quantityInput35.classList.add('hide');
+        quantityInput36.classList.add('hide');
+        quantityInput37.classList.add('hide');
+        quantityInput38.classList.add('hide');
+        quantityInput39.classList.add('hide');
+        quantityInput40.classList.add('hide');
+        quantityInput41.classList.add('hide');
+        quantityInput42.classList.add('hide');
+        quantityInput43.classList.add('hide');
+        quantityInput44.classList.add('hide');
+        quantityInput45.classList.add('hide');
+        quantityInput46.classList.add('hide');
+        quantityInput47.classList.add('hide');
+        quantityInput48.classList.add('hide');
+        quantityInput49.classList.add('hide');
+        quantityInput50.classList.add('hide');
+        quantityInput51.classList.add('hide');
+        quantityInput52.classList.add('hide');
+        quantityInput53.classList.add('hide');
+        quantityInput54.classList.add('hide');
+        quantityInput55.classList.add('hide');
+        quantityInput56.classList.add('hide');
+        quantityInput57.classList.add('hide');
+        quantityInput58.classList.add('hide');
+        quantityInput59.classList.add('hide');
+        quantityInput60.classList.add('hide');
+        quantityInput61.classList.add('hide');
+        quantityInput62.classList.add('hide');
+        quantityInput63.classList.add('hide');
+        quantityInput64.classList.add('hide');
+        quantityInput65.classList.add('hide');
+        quantityInput66.classList.add('hide');
+        quantityInput67.classList.add('hide');
+        quantityInput68.classList.add('hide');
+        quantityInput69.classList.add('hide');
+        quantityInput70.classList.add('hide');
+        quantityInput71.classList.add('hide');
+        quantityInput72.classList.add('hide');
+        quantityInput73.classList.add('hide');
+        quantityInput74.classList.add('hide');
+        quantityInput75.classList.add('hide');
+        quantityInput76.classList.add('hide');
+        quantityInput77.classList.add('hide');
+        quantityInput78.classList.add('hide');
+        quantityInput79.classList.add('hide');
+        quantityInput80.classList.add('hide');
+        quantityInput81.classList.add('hide');
+        quantityInput82.classList.add('hide');
+        quantityInput83.classList.add('hide');
+        quantityInput84.classList.add('hide');
+        quantityInput85.classList.add('hide');
+        quantityInput86.classList.add('hide');
+        quantityInput87.classList.add('hide');
+        quantityInput88.classList.add('hide');
+        quantityInput89.classList.add('hide');
+        quantityInput90.classList.add('hide');
+        quantityInput91.classList.add('hide');
+        quantityInput92.classList.add('hide');
+        quantityInput93.classList.add('hide');
+        quantityInput94.classList.add('hide');
+        quantityInput95.classList.add('hide');
+        quantityInput96.classList.add('hide');
+        quantityInput97.classList.add('hide');
+        quantityInput98.classList.add('hide');
+        quantityInput99.classList.add('hide');
+        quantityInput100.classList.add('hide');
+        quantityInput101.classList.add('hide');
+        quantityInput102.classList.add('hide');
+        quantityInput103.classList.add('hide');
+        quantityInput104.classList.add('hide');
+        quantityInput105.classList.add('hide');
+        quantityInput106.classList.add('hide');
+        quantityInput107.classList.add('hide');
+        quantityInput108.classList.add('hide');
+        quantityInput109.classList.add('hide');
+        quantityInput110.classList.add('hide');
+        quantityInput111.classList.add('hide');
+        quantityInput112.classList.add('hide');
+        quantityInput113.classList.add('hide');
+        quantityInput114.classList.add('hide');
+        quantityInput115.classList.add('hide');
+        quantityInput116.classList.add('hide');
+        quantityInput117.classList.add('hide');
+        quantityInput118.classList.add('hide');
+        quantityInput119.classList.add('hide');
+        quantityInput120.classList.add('hide');
+        quantityInput121.classList.add('hide');
+        quantityInput122.classList.add('hide');
+        quantityInput123.classList.add('hide');
+        quantityInput124.classList.add('hide');
+        quantityInput125.classList.add('hide');
+        quantityInput126.classList.add('hide');
+        quantityInput127.classList.add('hide');
+        quantityInput128.classList.add('hide');
+        quantityInput129.classList.add('hide');
+        quantityInput130.classList.add('hide');
+        quantityInput131.classList.add('hide');
+        quantityInput132.classList.add('hide');
+        quantityInput133.classList.add('hide');
+        quantityInput134.classList.add('hide');
+        quantityInput135.classList.add('hide');
       }
