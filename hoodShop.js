@@ -517,7 +517,7 @@ const myOrderNumber = document.querySelector('.my-order-number');
           productPrice: 16
         },
         {
-          productPic: "jungle Oats 1kg.jpg",
+          productPic: "jungle oats 1kg.jpg",
           productName: "Jungle Oats 1kg",
           productPrice: 46
         },
@@ -1357,7 +1357,7 @@ const myOrderNumber = document.querySelector('.my-order-number');
                       });
                     } else if(food === "Jungle Oats 1kg") {
                       order.push({
-                        orderPic: "jungle Oats 1kg.jpg",
+                        orderPic: "jungle oats 1kg.jpg",
                         orderName: "Jungle Oats 1kg",
                         orderPrice: 46,
                         orderQuantity: 1
