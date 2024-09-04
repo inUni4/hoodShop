@@ -327,3 +327,20 @@ input{
   width: 0.1%;
   padding: 0;
 }
+.my-order-number{
+  background-color: rgb(209, 1, 1);
+  color: white;
+  font-size: 10px;
+  width: 10%;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  position: fixed;
+  bottom: 12%;
+  right: 5%;
+  transition: all ease 0.3s;
+  border: none;
+  z-index: 1;
+}
